@@ -1,0 +1,159 @@
+/* ============================================================================
+   VERANDA FILMS — studio.css  (page-specific styles for studio.html)
+   Depends on assets/css/site.css tokens and components. Never edit site.css here.
+   Sections: F33 manifesto · F34 about + method + honesty · F35 timeline + tools
+   ============================================================================ */
+
+/* ---------- F33 Manifesto: sticky kinetic text ---------------------------- */
+.manifesto{position:relative;background:var(--ink)}
+.mf-sticky{position:relative;isolation:isolate;overflow:hidden;min-height:100vh;min-height:100svh}
+.mf-sticky > .bg-loop{z-index:0}
+.mf-inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-rows:auto minmax(0,1fr) auto;
+  min-height:100vh;min-height:100svh;
+  padding-top:calc(var(--nav-h) + 1.5rem);padding-bottom:2rem;
+}
+.mf-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.mf-count{display:flex;gap:.4em;align-items:baseline;color:var(--cream-50)}
+.mf-count b{font-weight:500;color:var(--cream);font-size:1.25rem;letter-spacing:.04em}
+.mf-lines{position:relative;display:grid;align-content:center;padding-block:2rem}
+.mf-line{
+  font-family:var(--font-display);font-weight:500;line-height:1.02;letter-spacing:-.03em;
+  font-size:clamp(2.4rem, 7.2vw, 7.4rem);
+  max-width:16ch;color:var(--cream);text-wrap:balance;
+}
+.mf-line--close{font-size:clamp(1.6rem, 3.6vw, 3.6rem);font-weight:400;max-width:20ch;color:var(--cream-80);letter-spacing:-.02em}
+.mf-line--turn em{color:var(--gold)}
+.mf-foot{display:grid;gap:.9rem;align-items:end}
+.mf-track{height:1px;background:var(--line-2);position:relative;overflow:hidden}
+.mf-fill{position:absolute;inset:0;background:linear-gradient(90deg,var(--teal),var(--gold));transform-origin:left;transform:scaleX(0)}
+.mf-hint{color:var(--cream-50);display:flex;align-items:center;gap:.8em}
+.mf-hint::after{content:"";width:1px;height:26px;background:linear-gradient(180deg,var(--teal),transparent);animation:mf-hint 1.8s var(--ease-out) infinite}
+@keyframes mf-hint{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* kinetic mode (JS on, motion allowed): runway + sticky stage, one line at a time */
+html.js .manifesto:not(.is-stacked){height:380vh}
+html.js .manifesto:not(.is-stacked) .mf-sticky{position:sticky;top:0;height:100vh;height:100svh}
+html.js .manifesto:not(.is-stacked) .mf-lines{display:block;min-height:0}
+html.js .manifesto:not(.is-stacked) .mf-line{
+  position:absolute;left:0;top:50%;
+  opacity:0;
+  transform:translateY(calc(50% + 48px));
+  filter:blur(6px);
+  transition:opacity .7s var(--ease-out),transform 1s var(--ease-out),filter .7s var(--ease-out),color .6s;
+  pointer-events:none;
+}
+html.js .manifesto:not(.is-stacked) .mf-line.is-on{opacity:1;transform:translateY(-50%);filter:blur(0);pointer-events:auto}
+html.js .manifesto:not(.is-stacked) .mf-line.is-past{opacity:0;transform:translateY(calc(-50% - 56px)) scale(.94);filter:blur(4px)}
+html.js .manifesto:not(.is-stacked) .mf-line--close{top:50%}
+html.js .manifesto:not(.is-stacked).is-done .mf-hint{opacity:0;transition:opacity .5s}
+
+/* stacked mode (reduced motion, ?noanim, no JS, or JS decided to stack): all lines visible */
+.manifesto.is-stacked .mf-lines,html:not(.js) .mf-lines{display:grid;gap:clamp(.6rem, 1.6vw, 1.2rem);padding-block:clamp(2rem, 6vw, 4rem)}
+.manifesto.is-stacked .mf-line,html:not(.js) .mf-line{font-size:clamp(2rem, 5.2vw, 5rem)}
+.manifesto.is-stacked .mf-line--close,html:not(.js) .mf-line--close{font-size:clamp(1.4rem, 2.6vw, 2.6rem);margin-top:1rem}
+.manifesto.is-stacked .mf-hint,html:not(.js) .mf-hint{display:none}
+.manifesto.is-stacked .mf-fill,html:not(.js) .mf-fill{transform:none}
+.manifesto.is-stacked .mf-sticky,html:not(.js) .mf-sticky{min-height:0}
+.manifesto.is-stacked .mf-inner,html:not(.js) .mf-inner{min-height:0}
+
+/* ---------- F34 About ------------------------------------------------------ */
+.about-split{align-items:start}
+.about-text{display:grid;gap:1.3rem;align-content:start}
+.about-text .h1{max-width:12ch}
+.about-text .lead{margin-top:.4rem}
+.about-facts{
+  display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:1.1rem 2rem;
+  margin-top:1rem;padding-top:1.6rem;border-top:1px solid var(--line);
+}
+@media (min-width:640px){.about-facts{grid-template-columns:repeat(4, auto);justify-content:start;gap:1.1rem clamp(1.6rem, 4vw, 3.2rem)}}
+.about-facts div{display:grid;gap:.4rem}
+.about-facts dt{color:var(--cream-50);font-size:var(--fs-mono)}
+.about-facts dd{margin:0;color:var(--cream);font-size:.95rem;letter-spacing:.08em;white-space:nowrap}
+.about-figure{
+  position:relative;margin:0;border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--line);background:var(--navy-2);aspect-ratio:3 / 4;isolation:isolate;
+}
+@media (min-width:960px){.about-figure{position:sticky;top:calc(var(--nav-h) + 1.5rem)}}
+.about-figure img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04);transition:transform 1.6s var(--ease-out)}
+.about-figure:hover img{transform:scale(1)}
+.about-figure::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,9,18,0) 55%,rgba(6,9,18,.75) 100%);
+}
+.about-figure figcaption{position:absolute;left:1.2rem;bottom:1.1rem;z-index:2;color:var(--cream-60)}
+
+/* the method: five steps on a beam line */
+.method{position:relative;margin-top:clamp(4rem, 8vw, 7rem);display:grid;gap:2rem}
+.method-steps{list-style:none;margin:0;padding:0;display:grid;gap:1.6rem 1.2rem;grid-template-columns:repeat(5, minmax(0,1fr));counter-reset:none}
+@media (max-width:1023px){.method-steps{grid-template-columns:repeat(3, minmax(0,1fr))}}
+@media (max-width:639px){.method-steps{grid-template-columns:repeat(2, minmax(0,1fr))}}
+.method-step{display:grid;gap:.8rem;align-content:start;position:relative;padding-top:1.2rem;border-top:1px solid var(--line)}
+.method-step::before{content:"";position:absolute;left:0;top:-1px;width:100%;height:1px;background:linear-gradient(90deg,var(--teal),var(--gold));transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease-out)}
+.method-step.is-lit::before{transform:scaleX(1)}
+.method-step.is-lit .card-icon{border-color:rgba(91,240,225,.5)}
+.method-label{color:var(--cream)}
+.method-label b{font-weight:500;color:var(--cream-50);margin-right:.5em}
+.method-desc{color:var(--cream-60);font-size:var(--fs-sm);line-height:1.5;max-width:22ch}
+.method-line{display:none}
+
+/* honesty box */
+.honesty{margin-top:clamp(3.5rem, 7vw, 6rem);padding:clamp(1.8rem, 3.5vw, 3.2rem);border-color:rgba(255,208,138,.22);display:grid;gap:2rem}
+@media (min-width:960px){.honesty{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}}
+.honesty::before{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(60% 80% at 100% 0%,rgba(255,208,138,.10),transparent 60%);
+}
+.honesty-head{display:grid;gap:1.2rem;position:relative}
+.honesty-head .h2{max-width:12ch}
+.honesty-list{list-style:none;margin:0;padding:0;display:grid;position:relative}
+.honesty-list li{display:flex;gap:1.1rem;align-items:flex-start;padding:1.15rem 0;border-top:1px solid var(--line);color:var(--cream-80);font-size:var(--fs-body);line-height:1.55}
+.honesty-list li:first-child{border-top:0;padding-top:0}
+.honesty-x{
+  flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid rgba(255,106,74,.45);color:var(--coral);margin-top:.05rem;
+}
+.honesty-x .icon{width:14px;height:14px}
+
+/* ---------- F35 Process timeline + tools ----------------------------------- */
+.process-grid{display:grid;gap:clamp(2.5rem, 5vw, 5rem);grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start;overflow-x:clip}
+@media (max-width:959px){.process-grid{grid-template-columns:1fr}}
+.timeline{list-style:none;margin:0;padding:0 0 0 2.2rem;position:relative;display:grid;gap:clamp(2rem, 4vw, 3.2rem)}
+.tl-line{position:absolute;left:8px;top:10px;bottom:10px;width:1px;background:var(--line-2)}
+.tl-fill{position:absolute;inset:0;background:linear-gradient(180deg,var(--teal),var(--blue) 60%,var(--gold));transform-origin:top;transform:scaleY(var(--fill, 0));transition:transform .25s linear}
+.tl-item{position:relative;display:grid;gap:.5rem}
+.tl-dot{
+  position:absolute;left:calc(-2.2rem + 3px);top:.55rem;width:11px;height:11px;border-radius:50%;
+  background:var(--navy);border:1px solid var(--cream-30);
+  transition:background .5s,border-color .5s,box-shadow .6s var(--ease-out);
+}
+.tl-item.is-lit .tl-dot{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 5px rgba(91,240,225,.14)}
+.tl-item--final.is-lit .tl-dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 6px rgba(255,208,138,.16)}
+.tl-day{color:var(--cream-60)}
+.tl-item--final .tl-day{color:var(--gold)}
+.tl-item .h3{max-width:20ch}
+.tl-item p.muted{max-width:48ch;line-height:1.55}
+.tl-item--batch{margin-top:.6rem;padding-top:clamp(1.6rem, 3vw, 2.4rem);border-top:1px dashed var(--line-2)}
+.tl-item--batch .tl-dot{top:calc(.55rem + clamp(1.6rem, 3vw, 2.4rem))}
+.tools{display:grid;gap:1.2rem;align-content:start}
+@media (min-width:960px){.tools{position:sticky;top:calc(var(--nav-h) + 1.5rem)}}
+.tools .h3{max-width:16ch}
+.tools-list{list-style:none;margin:.4rem 0 0;padding:0;display:grid}
+.tools-list li{display:flex;gap:1rem;align-items:center;padding:.95rem 0;border-top:1px solid var(--line);color:var(--cream-80);font-size:var(--fs-body);line-height:1.45}
+.tools-list li:first-child{border-top:0;padding-top:0}
+.tools-list .card-icon{flex:none;width:40px;height:40px}
+.tools .fine{margin-top:.6rem}
+
+/* ---------- reduced motion / noanim ---------------------------------------- */
+html.noanim .mf-line,html.reduce .mf-line{opacity:1 !important;transform:none !important;filter:none !important}
+html.noanim .method-step::before,html.noanim .mf-fill{transform:none !important}
+html.noanim .mf-hint,html.reduce .mf-hint::after{display:none;animation:none}
+html.noanim .tl-fill{transform:scaleY(1) !important}
+html.noanim .tl-item .tl-dot{background:var(--teal);border-color:var(--teal)}
+html.noanim .tl-item--final .tl-dot{background:var(--gold);border-color:var(--gold)}
+html.noanim .about-figure img{transform:none}
+@media (prefers-reduced-motion: reduce){
+  .mf-hint::after{animation:none}
+  .method-step::before,.tl-fill,.about-figure img{transition:none}
+}

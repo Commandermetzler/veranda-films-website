@@ -1,0 +1,81 @@
+/* ═══ Veranda Films — contact.html (F36) ═══ */
+
+/* Reach block: big email + channels | studio time + map */
+.reach{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+@media (max-width:959px){.reach{grid-template-columns:1fr}}
+
+.big-mail{overflow-wrap:normal;word-break:keep-all;hyphens:none;
+  display:inline-block;font-family:var(--font-display);font-weight:500;line-height:1.02;letter-spacing:-.025em;
+  font-size:clamp(1.55rem, 4.2vw + .35rem, 4.4rem);color:var(--cream);text-decoration:none;
+  position:relative;padding-bottom:.12em;
+}
+.big-mail::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--grad-a);opacity:.55;transform-origin:left;transition:opacity .5s var(--ease-out),background .4s}
+.big-mail:hover::after,.big-mail:focus-visible::after{opacity:1;background:var(--grad-b)}
+.big-mail-at{color:var(--teal);font-weight:400}
+.reach-note{color:var(--cream-60);margin-top:.9rem}
+.reach-list--top{margin-top:.6rem}
+.page-head-mail{display:grid;gap:.9rem;justify-items:start;margin-top:clamp(1.6rem, 4vw, 2.6rem)}
+.page-head-mail .eyebrow{margin:0}
+.page-head-mail .btn-row{margin-top:.4rem}
+@media (min-width:960px){.page-head--media .page-head-mail{grid-column:2;grid-row:1 / 5;align-self:end;margin-top:0}}
+.map-photo{display:block;width:100%;height:auto;aspect-ratio:21 / 9;object-fit:cover;object-position:50% 60%;border-bottom:1px solid var(--line)}
+
+.reach-list{list-style:none;margin:2.4rem 0 0;padding:0;border-top:1px solid var(--line)}
+.reach-list li{border-bottom:1px solid var(--line)}
+.reach-link{
+  display:grid;grid-template-columns:44px minmax(0,1fr) 24px;gap:1.1rem;align-items:center;
+  padding:1.1rem 0;color:var(--cream);text-decoration:none;transition:padding-left .5s var(--ease-out),color .3s;
+}
+.reach-link:hover{padding-left:.6rem}
+.reach-link b{display:block;font-family:var(--font-display);font-weight:500;font-size:1.08rem;letter-spacing:-.01em}
+.reach-link small{display:block;color:var(--cream-60);font-size:var(--fs-sm);margin-top:.15rem}
+.reach-link .arrow{color:var(--cream-60);transition:transform .5s var(--ease-out),color .3s}
+.reach-link:hover .arrow{transform:translate(3px,-3px);color:var(--teal)}
+
+.reach-side{display:grid;gap:1.25rem}
+.time-card .label{margin-bottom:.9rem}
+.time-val{font-family:var(--font-display);font-weight:500;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;letter-spacing:-.03em;margin:0 0 .9rem;display:flex;align-items:baseline;gap:.35em;flex-wrap:wrap}
+.time-val [data-bali-time]{font-family:var(--font-mono);font-weight:400;font-variant-numeric:tabular-nums;color:var(--teal)}
+.time-line{margin:0}
+.time-card .fine{margin-top:.6rem}
+
+/* Bali map (SVG) with pulsing studio dot */
+.map-card{padding:0;overflow:hidden}
+.map-card figcaption{padding:1rem 1.4rem 1.3rem;margin:0;border-top:1px solid var(--line)}
+.bali-map{display:block;width:100%;height:auto;aspect-ratio:420/280;background:
+  radial-gradient(60% 70% at 55% 60%, rgba(45,124,255,.10), transparent 70%),var(--ink)}
+.map-grid{stroke:rgba(244,239,230,.08);stroke-width:1;stroke-dasharray:3 5}
+.map-label{font-family:var(--font-mono);font-size:8px;letter-spacing:.14em;fill:rgba(244,239,230,.35)}
+.map-land{fill:rgba(244,239,230,.05);stroke:rgba(244,239,230,.55);stroke-width:1.2;stroke-linejoin:round}
+.map-island{fill:rgba(244,239,230,.04);stroke:rgba(244,239,230,.35);stroke-width:1}
+.map-dot{fill:var(--teal)}
+.map-pulse{fill:none;stroke:var(--teal);stroke-width:1.2;transform-origin:228px 185.8px;transform-box:view-box;animation:map-pulse 2.6s cubic-bezier(.23,1,.32,1) infinite}
+.map-pulse--2{animation-delay:1.3s}
+@keyframes map-pulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(4.2);opacity:0}}
+.map-name{font-family:var(--font-mono);font-size:9px;letter-spacing:.18em;fill:var(--cream)}
+.map-coord{font-family:var(--font-mono);font-size:8px;letter-spacing:.1em;fill:rgba(244,239,230,.55)}
+.map-line{stroke:rgba(91,240,225,.5);stroke-width:1}
+html.reduce .map-pulse,html.noanim .map-pulse{animation:none;opacity:.35;transform:scale(2)}
+
+/* Message composer */
+.composer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(1.25rem,3vw,2.5rem);align-items:start}
+@media (max-width:959px){.composer{grid-template-columns:1fr}}
+.composer-form{display:grid;gap:1.25rem}
+.composer-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media (max-width:559px){.composer-row{grid-template-columns:1fr}}
+.composer-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem 1.2rem;padding-top:.2rem}
+@media (min-width:600px){.composer-checks{grid-template-columns:repeat(4,auto);justify-content:start;gap:1rem 1.6rem}}
+.form-msg{min-height:1.2em;color:var(--coral);letter-spacing:.08em;text-transform:none;margin:-.4rem 0 0}
+.form-msg:empty{display:none}
+.composer-preview{position:sticky;top:calc(var(--nav-h) + 1rem);display:grid;gap:.9rem}
+.preview-subject{color:var(--teal);text-transform:none;letter-spacing:.04em;word-break:break-word}
+.preview-body{
+  margin:0;font-family:var(--font-body);font-size:var(--fs-sm);line-height:1.65;color:var(--cream-80);
+  white-space:pre-wrap;overflow-wrap:anywhere;border-top:1px solid var(--line);padding-top:.9rem;min-height:12em;
+}
+.preview-body .ph{color:var(--cream-30)}
+@media (max-width:959px){.composer-preview{position:static}}
+
+/* Endabnahme 23.09.: E-Mail bricht nur hinter dem @, nie mitten im Wort */
+.big-mail{font-size:clamp(1.55rem, 3.55vw, 3.1rem);letter-spacing:-.01em}
+@media (min-width:1200px){.big-mail{font-size:clamp(2rem, 3.2vw, 2.9rem)}}

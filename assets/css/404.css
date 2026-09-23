@@ -1,0 +1,8 @@
+/* ═══ Veranda Films — 404.html ═══ */
+.nf{min-height:calc(100vh - 120px);min-height:calc(100svh - 120px);display:grid;align-items:center;overflow:hidden;isolation:isolate}
+.nf .container{position:relative;z-index:2;display:grid;justify-items:center;gap:1.6rem;text-align:center}
+.nf .display{max-width:12ch}
+.nf .lead{margin-inline:auto}
+.nf-code{color:var(--cream-60);letter-spacing:.2em}
+/* beams: only the global fixed layer (same as every other page) */
+.nf-symbol{position:absolute;z-index:1;left:50%;top:50%;width:min(62vmin,560px);height:min(62vmin,560px);transform:translate(-50%,-52%);opacity:.07;pointer-events:none;filter:blur(1px)}

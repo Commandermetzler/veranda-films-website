@@ -1,0 +1,159 @@
+/* ==========================================================================
+   VERANDA FILMS — films.css  (films.html only; loads after site.css)
+   F24 film features + "how it was made" strips · F25 showreel bar · page-specific spacing
+   Tokens, buttons, cards, .film-card, .morph, .page-head, .cta-band come from site.css.
+   ========================================================================== */
+
+/* ---------- Page head additions: showreel bar (F25) ---------- */
+.page-head--films .lead{max-width:62ch}
+.page-head--films{padding-bottom:1rem}
+#babylon{padding-top:clamp(2rem, 4vw, 3rem)}
+.reel-bar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem;margin-top:1.2rem;
+}
+.reel-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;color:var(--cream-60)}
+.reel-meta span{white-space:nowrap}
+.reel-meta i{font-style:normal;color:var(--cream-50)}
+.btn .icon--fill.icon--xs{width:16px;height:16px}
+
+/* ---------- F24 Film feature ---------- */
+.film-feature{padding-block:clamp(4rem, 8vw, 7.5rem);scroll-margin-top:calc(var(--nav-h) + 8px)}
+.film-feature + .film-feature{padding-top:clamp(3rem, 6vw, 5.5rem)}
+.feat-head{
+  display:grid;grid-template-columns:minmax(0, 1fr) auto;align-items:end;
+  gap:1.2rem clamp(1.5rem, 4vw, 4rem);margin-bottom:clamp(1.6rem, 3vw, 2.6rem);
+}
+.feat-index{display:flex;align-items:center;gap:.9rem;grid-column:1 / -1;color:var(--cream-60)}
+.feat-index::before{content:"";width:28px;height:1px;background:var(--grad-a);flex:none}
+.feat-title{
+  font-size:clamp(2.75rem, 7.6vw, 7.6rem);font-weight:500;letter-spacing:-.035em;line-height:.95;
+  max-width:none;margin:0;overflow-wrap:anywhere;
+}
+.feat-side{display:grid;gap:.5rem;justify-items:start;padding-bottom:.35rem}
+.feat-loc{font-family:var(--font-display);font-size:var(--fs-4);font-weight:400;color:var(--cream);letter-spacing:-.01em;margin:0}
+.feat-spec{color:var(--cream-60);margin:0}
+@media (max-width:859px){
+  .feat-head{grid-template-columns:1fr;align-items:start}
+  .feat-side{padding-bottom:0}
+}
+
+/* the feature player is the shared .film-card, made full width and wide */
+.feat-player{aspect-ratio:16/9;border-radius:var(--r-xl)}
+.feat-player .play-btn{width:96px;height:96px}
+.feat-player .play-btn .icon{width:32px;height:32px}
+.feat-player .film-info{padding:clamp(1.2rem, 2.4vw, 2rem)}
+@media (max-width:639px){
+  .feat-player{border-radius:var(--r-lg)}
+  .feat-player .play-btn{width:72px;height:72px}
+  .feat-player .play-btn .icon{width:26px;height:26px}
+  .feat-player .film-meta{display:none}
+}
+
+/* description row under the player */
+.feat-body{
+  display:grid;grid-template-columns:minmax(0, 1.4fr) minmax(0, 1fr);gap:1.2rem clamp(2rem, 5vw, 5rem);
+  align-items:start;margin-top:clamp(1.4rem, 2.6vw, 2.2rem);
+}
+.feat-body .lead{max-width:56ch}
+.feat-facts{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none;justify-content:flex-end}
+.feat-facts li{
+  padding:.45rem .8rem;border:1px solid var(--line);border-radius:var(--r-pill);
+  color:var(--cream-60);white-space:nowrap;
+}
+@media (max-width:859px){
+  .feat-body{grid-template-columns:1fr}
+  .feat-facts{justify-content:flex-start}
+}
+
+/* ---------- F24 "How it was made" strip: 4 stills → 4 tiny clips ---------- */
+.made{margin-top:clamp(2.2rem, 4vw, 3.6rem)}
+.made-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.6rem 2rem;margin-bottom:1.1rem}
+.made-hint{color:var(--cream-60);margin:0}
+.made-strip{
+  display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:clamp(.7rem, 1.4vw, 1.1rem);
+  margin:0;padding:0;list-style:none;counter-reset:made;
+}
+.made-tile{position:relative;min-width:0}
+.made-btn{
+  position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;
+  border-radius:var(--r-lg);border:1px solid var(--line);background:var(--navy-2);
+  cursor:pointer;color:var(--cream);text-align:left;padding:0;isolation:isolate;
+  transition:border-color .5s,transform .8s var(--ease-out),box-shadow .8s var(--ease-out);
+}
+.made-btn:hover,.made-tile.is-on .made-btn{border-color:var(--line-2);box-shadow:0 30px 60px -36px rgba(0,0,0,.9)}
+.made-btn:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.made-btn img,.made-btn video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.made-btn video{opacity:0;transition:opacity .6s}
+.made-tile.is-on .made-btn video{opacity:1}
+.made-btn img{transition:transform 1.4s var(--ease-out)}
+.made-btn:hover img,.made-tile.is-on .made-btn img{transform:scale(1.04)}
+/* corner state tag: PHOTO ⇄ CLIP */
+.made-tag{
+  position:absolute;top:10px;left:10px;z-index:2;display:inline-flex;align-items:center;gap:.4rem;
+  padding:.3rem .55rem;border-radius:var(--r-sm);background:rgba(6,9,18,.62);
+  color:var(--cream);font-size:10.5px;letter-spacing:.14em;
+  transition:background .5s,color .5s;
+}
+.made-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cream-30);transition:background .5s}
+.made-tile.is-on .made-tag{background:rgba(6,9,18,.7);color:var(--teal)}
+.made-tile.is-on .made-tag::before{background:var(--teal);box-shadow:0 0 10px var(--teal)}
+.made-tag [data-when]{display:none}
+.made-tile:not(.is-on) .made-tag [data-when="still"]{display:inline}
+.made-tile.is-on .made-tag [data-when="clip"]{display:inline}
+/* tiny progress line at the bottom of the tile while the clip runs */
+.made-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--line);z-index:2;overflow:hidden}
+.made-line::after{
+  content:"";position:absolute;inset:0;background:var(--grad-ab, var(--grad-a));
+  transform:scaleX(var(--p, 0));transform-origin:left;
+}
+.made-cap{
+  display:flex;align-items:baseline;gap:.6rem;margin:.75rem 0 0;
+  font-size:var(--fs-sm);color:var(--cream-60);
+}
+.made-cap .mono{color:var(--cream-50)}
+.made-tile.is-on .made-cap{color:var(--cream)}
+/* the arrow between tiles (stills → clips reading direction) */
+.made-tile + .made-tile::before{
+  content:"";position:absolute;top:calc(28% - 1px);left:calc(-1 * clamp(.7rem, 1.4vw, 1.1rem));
+  width:clamp(.7rem, 1.4vw, 1.1rem);height:1px;background:var(--line-2);
+}
+@media (max-width:859px){
+  .made-strip{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .made-tile:nth-child(3)::before{display:none}
+  .made-btn{border-radius:var(--r-lg)}
+}
+@media (max-width:359px){
+  .made-strip{grid-template-columns:1fr}
+  .made-tile + .made-tile::before{display:none}
+}
+
+/* ---------- Small print + play-all row after the three features ---------- */
+.films-note{
+  display:grid;grid-template-columns:minmax(0, 1fr) auto;gap:1.2rem 2.5rem;align-items:center;
+  padding-top:clamp(1.6rem, 3vw, 2.6rem);border-top:1px solid var(--line);
+}
+.films-note .fine{max-width:68ch;margin:0}
+@media (max-width:859px){.films-note{grid-template-columns:1fr}}
+
+/* ---------- Morph section on this page (a little tighter than Home) ---------- */
+#formats.section--tight{padding-top:calc(var(--sec) * .5)}
+
+/* ---------- CTA band: secondary link row ---------- */
+.cta-secondary{margin-top:-.4rem}
+
+/* ---------- Static / reduced motion / noanim: clips stay as stills, all states visible ---------- */
+html.noanim .made-btn video,html.reduce .made-btn video{transition:none}
+html.noanim .made-line::after{transform:none;opacity:.35}
+
+/* head media: showreel strip (three stills side by side), replaces the single-poster card */
+.reel-strip{display:block;width:100%;padding:0;border:1px solid var(--line);aspect-ratio:21 / 9;cursor:pointer;color:var(--cream);text-align:left;font:inherit;background:var(--navy-2)}
+.reel-frames{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--navy)}
+.reel-frames img{display:block;width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform 1.6s var(--ease-out),opacity .8s}
+.reel-frames img:nth-child(1){transition-delay:0s}.reel-frames img:nth-child(2){transition-delay:.06s}.reel-frames img:nth-child(3){transition-delay:.12s}
+.reel-strip:hover .reel-frames img,.reel-strip:focus-visible .reel-frames img{transform:scale(1.05);opacity:1}
+.reel-strip .film-info{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.reel-strip .film-info > span:first-child{display:block}
+.reel-strip .film-title,.reel-strip .film-loc{display:block}
+.reel-strip .play-btn{transition:transform .6s var(--ease-out),background .4s}
+.reel-strip:hover .play-btn{transform:translate(-50%,-50%) scale(1.06);background:rgba(6,9,18,.6)}
+@media (min-width:960px){.page-head--films .reel-bar{display:none}}

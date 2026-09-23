@@ -1,0 +1,6 @@
+# Veranda Films — verandafilms.com
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://verandafilms.com/sitemap.xml

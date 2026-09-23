@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veranda Films — Villa films from your photos</title>
+<meta name="description" content="We turn the photos your villa already has into a 30-second cinematic film. No crew, no drone, no visit. Three formats, delivered within a week.">
+<script>
+/* QA hooks + no-flash state, must run before first paint */
+if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('noanim');
+(function(h){h.classList.add('js');try{if(sessionStorage.getItem('vf-seen'))h.classList.add('vf-seen');if(sessionStorage.getItem('vf-wipe')){sessionStorage.removeItem('vf-wipe');if(!h.classList.contains('noanim')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)h.classList.add('vf-enter');}}catch(e){}if(matchMedia('(prefers-reduced-motion: reduce)').matches)h.classList.add('reduce');})(document.documentElement);
+</script>
+<link rel="canonical" href="https://verandafilms.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Veranda Films">
+<meta property="og:url" content="https://verandafilms.com/">
+<meta property="og:title" content="Films for villas, from the photos you already have">
+<meta property="og:description" content="A cinematic 30-second film of every property — no crew, no drone, no visit. €100 launch rate while we build our showreel.">
+<meta property="og:image" content="https://verandafilms.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Veranda Films: cinematic films for villas, made from your photos">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Films for villas, from the photos you already have">
+<meta name="twitter:description" content="A cinematic 30-second film of every property — no crew, no drone, no visit. €100 launch rate while we build our showreel.">
+<meta name="twitter:image" content="https://verandafilms.com/assets/img/og.jpg">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A0F1E">
+<meta name="apple-mobile-web-app-title" content="Veranda">
+<link rel="preload" as="image" href="assets/seq/hero/poster.jpg" imagesrcset="assets/seq/hero/poster-960.jpg 960w, assets/seq/hero/poster.jpg 1920w" imagesizes="100vw" fetchpriority="high">
+<!-- fonts: self-hosted WOFF2 (assets/fonts), @font-face in site.css, metric-matched local fallbacks -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/jost-var-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/instrument-sans-var-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/instrument-serif-italic-latin.woff2">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://verandafilms.com/#org","name":"Veranda Films","alternateName":"Veranda Films Bali","url":"https://verandafilms.com/","email":"hello@verandafilms.com","logo":"https://verandafilms.com/assets/img/icon-512.png","image":"https://verandafilms.com/assets/img/og.jpg","description":"Veranda Films is a Bali-based studio that turns the photos a villa or hotel already has into a cinematic 30-second film, delivered in three formats within a week, with no crew, no drone and no site visit. The studio also builds direct-booking websites, presentations, listing copy and translation, social content kits, photo polish, narrated films and guest guidebooks — all produced remotely.","foundingDate":"2026","founder":[{"@type":"Person","name":"Lucas Metzler"},{"@type":"Person","name":"Tobias Schönmetzler"}],"address":{"@type":"PostalAddress","addressLocality":"Canggu","addressRegion":"Bali","addressCountry":"ID"},"areaServed":["Indonesia","Thailand","Vietnam","Philippines","Malaysia","Sri Lanka","Maldives","India","Mexico","Costa Rica","United States","United Arab Emirates","United Kingdom"],"sameAs":["https://instagram.com/verandafilms"]},
+{"@type":"WebSite","@id":"https://verandafilms.com/#website","url":"https://verandafilms.com/","name":"Veranda Films","publisher":{"@id":"https://verandafilms.com/#org"}},
+{"@type":"Service","name":"Cinematic villa film from existing photos","serviceType":"Video production","provider":{"@id":"https://verandafilms.com/#org"},"areaServed":"Worldwide","description":"A 30-second cinematic film of a villa, hotel or holiday rental, generated from the property's existing photographs. Thirteen shots cut to music, color graded, with opening title and closing card, delivered in 16:9, 9:16 and 4:5 within a week. No crew, no drone, no site visit. Two rounds of changes included.","offers":{"@type":"Offer","price":"100","priceCurrency":"EUR","url":"https://verandafilms.com/contact.html","description":"Launch rate while the studio builds its showreel; regular price €399. Portfolio rates on request."}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this AI?","acceptedAnswer":{"@type":"Answer","text":"The movement is generated from your own photographs. It is your property in every frame — nothing invented, nothing added, no rooms that do not exist. That is exactly why we can deliver within a week without anyone walking through the building. We never present it as drone footage, and we ask that you do not either."}},
+{"@type":"Question","name":"We already paid for professional photos.","acceptedAnswer":{"@type":"Answer","text":"Good. That is what makes this work. You paid for the hard part; this turns it into something that moves. The better the photos, the better the film."}},
+{"@type":"Question","name":"What if the result is not good?","acceptedAnswer":{"@type":"Answer","text":"Two rounds of changes are included. If the source photos cannot carry a film, we say so before you pay, not after."}},
+{"@type":"Question","name":"Can you do all our properties?","acceptedAnswer":{"@type":"Answer","text":"Yes, and that is the part we are best at. Nobody sends a film crew to forty properties. We make the first one, you approve it, then we run the rest in batches with a per-property rate that drops with volume."}},
+{"@type":"Question","name":"Who owns the film?","acceptedAnswer":{"@type":"Answer","text":"You do, outright, for any use — your website, your listings, your ads, your socials. We ask permission before showing it in our own portfolio, and we accept no as an answer."}},
+{"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"Within a week from the day your photos arrive. Portfolios are delivered in batches; we agree the schedule with you before we start."}}
+]}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- SVG sprite: logo symbol + 24px stroke icons (1.5) used everywhere on the site -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="vf-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD08A"/><stop offset="1" stop-color="#FF6A4A"/></linearGradient>
+    <linearGradient id="vf-teal" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BF0E1"/><stop offset="1" stop-color="#2D7CFF"/></linearGradient>
+    <symbol id="vf-symbol" viewBox="0 0 512 512"><polygon points="92,108 180,108 280,404 220,404" fill="url(#vf-gold)"/><polygon points="332,108 420,108 292,404 232,404" fill="url(#vf-teal)" style="mix-blend-mode:screen"/><polygon points="228,138 228,210 290,174" fill="#F4EFE6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7.5 4.8v14.4a.6.6 0 0 0 .9.5l11.4-7.2a.6.6 0 0 0 0-1L8.4 4.3a.6.6 0 0 0-.9.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4M6 10l6-6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m14.5 5-7 7 7 7"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9.5 5 7 7-7 7"/></symbol>
+    <symbol id="i-drag" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M4 12h16"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4zM15.5 9a4.2 4.2 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4zM16 9.5l5 5M21 9.5l-5 5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17zM3.5 7l8.5 6.5L20.5 7"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.9L3.5 20.5l4.2-1.1A8.5 8.5 0 1 0 12 3.5z"/><path d="M9 9.8c0 2.6 2.6 5.2 5.2 5.2l1.3-1.3-1.9-1.3-.9.9a3.3 3.3 0 0 1-2-2l.9-.9L10.3 8.5z"/></symbol>
+    <symbol id="i-photos" viewBox="0 0 24 24"><rect x="3.5" y="6.5" width="14" height="11" rx="1.5"/><path d="M7.5 3.5h13v11M6 15l3.5-3.5 3 3 2-2 3 3"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="M3.5 9.5h17M3.5 14.5h17M8 5.5v13M16 5.5v13"/></symbol>
+    <symbol id="i-formats" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="10" height="6.5" rx="1"/><rect x="15.5" y="5.5" width="5" height="13" rx="1"/><rect x="3.5" y="14" width="10" height="4.5" rx="1"/></symbol>
+  </defs>
+</svg>
+
+<!-- F01 Preloader: beams draw in, counter 0→100, beam wipe reveals the page (first visit per session; skipped with ?noanim) -->
+<div class="preloader" aria-hidden="true">
+  <svg class="pre-mark" viewBox="0 0 512 512">
+    <defs>
+      <linearGradient id="pre-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD08A"/><stop offset="1" stop-color="#FF6A4A"/></linearGradient>
+      <linearGradient id="pre-teal" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BF0E1"/><stop offset="1" stop-color="#2D7CFF"/></linearGradient>
+    </defs>
+    <polygon class="pre-a" pathLength="1" points="92,108 180,108 280,404 220,404" fill="url(#pre-gold)"/>
+    <polygon class="pre-b" pathLength="1" points="332,108 420,108 292,404 232,404" fill="url(#pre-teal)" style="mix-blend-mode:screen"/>
+    <polygon class="pre-tri" points="228,138 228,210 290,174" fill="#F4EFE6"/>
+  </svg>
+  <div class="pre-word">Veranda Films</div>
+  <div class="pre-count mono">Loading <span class="pre-num">000</span></div>
+  <div class="pre-line">from the photos you already have</div>
+</div>
+
+<!-- F22 Scroll progress bar (2px, teal→gold) -->
+<div class="progress" aria-hidden="true"></div>
+
+<!-- F07 Rotating beams background + film grain (the logo motif behind every section) -->
+<div class="beams" aria-hidden="true"><i class="beam beam-a"></i><i class="beam beam-b"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- F06 Sticky glass nav: shrinks after 40px, sliding active indicator, beam wipe on internal links -->
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html" aria-label="Veranda Films — home"><img src="assets/img/symbol.svg" alt="" width="512" height="512" decoding="async"><span class="nav-word" aria-hidden="true">Veranda <b>Films</b></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="films.html">Films</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="contact.html" data-mag>Get a film</a>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- Mobile overlay menu (staggered items + beams) -->
+<div class="menu" id="menu">
+  <div class="beams beams--local beams--soft" aria-hidden="true"><i class="beam beam-a"></i><i class="beam beam-b"></i></div>
+  <nav class="menu-links" aria-label="Mobile">
+    <a href="index.html" aria-current="page" style="--i:0"><span class="mono">01</span>Home</a>
+    <a href="films.html" style="--i:1"><span class="mono">02</span>Films</a>
+    <a href="services.html" style="--i:2"><span class="mono">03</span>Services</a>
+    <a href="websites.html" style="--i:3"><span class="mono">04</span>Websites</a>
+    <a href="studio.html" style="--i:4"><span class="mono">05</span>Studio</a>
+    <a href="contact.html" style="--i:5"><span class="mono">06</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <span class="mono mono-lc">hello@verandafilms.com · Bali, UTC+8</span>
+    <a class="btn btn-primary btn-sm" href="contact.html">Get a film</a>
+  </div>
+</div>
+<!-- Page-transition beam wipe layer -->
+<div class="wipe" aria-hidden="true"></div>
+
+<main id="main">
+
+<!-- F02 Hero "From orbit to the veranda": 420vh runway, canvas scrubs 240 frames (assets/seq/hero), progressive loading, captions in thirds.
+     F03 Altitude HUD + lat/long ticker + rail (desktop). F04 kinetic headline. F23 mouse parallax on hero layers.
+     Fallbacks: <860px → hero-mobile.mp4 with captions on timers; reduced motion → villa still + headline. QA: ?scrub=0.5 -->
+<section class="hero" id="hero" aria-label="From orbit to the veranda">
+  <div class="hero-sticky">
+    <img class="hero-poster" src="assets/seq/hero/poster.jpg" srcset="assets/seq/hero/poster-960.jpg 960w, assets/seq/hero/poster.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="Earth at night seen from orbit, the first frame of the descent to a villa in Bali" fetchpriority="high" decoding="async">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <video class="hero-video" data-src="assets/video/hero-mobile.mp4" data-poster="assets/seq/hero/poster-960.jpg" muted loop playsinline preload="none" aria-label="A continuous descent from Earth orbit to a villa pool at dusk"></video>
+    <div class="hero-shade" aria-hidden="true"></div>
+
+    <div class="hero-captions">
+      <p class="cap">Nobody sends a film crew to 187 villas.</p>
+      <p class="cap">We don't have to.</p>
+      <p class="cap">A cinematic film of every property — from the <em class="serif">photos</em> you already have.</p>
+    </div>
+
+    <!-- F03 Altitude HUD: ALT 408 KM → 12 M, lat/long ticker settling on -8.6478, 115.1385, rail with 3 stops (desktop only) -->
+    <div class="hud" aria-hidden="true">
+      <div class="hud-block"><span class="hud-k">ALT</span><span class="hud-v" data-hud-alt>408 KM</span></div>
+      <div class="hud-block"><span class="hud-k">LAT / LNG</span><span class="hud-v"><span data-hud-lat>-2.3978</span>, <span data-hud-lng>106.5985</span></span></div>
+      <div class="hud-block"><span class="hud-k">DESCENT</span><span class="hud-v" data-hud-pct>000%</span></div>
+      <div class="hud-tag" data-hud-tag>CANGGU · BALI</div>
+    </div>
+    <div class="hud-rail" aria-hidden="true" data-hud-rail>
+      <div class="hud-rail-fill"></div>
+      <i class="hud-stop" data-hud-stop data-label="ORBIT" style="--at:0%"></i>
+      <i class="hud-stop" data-hud-stop data-label="COAST" style="--at:50%"></i>
+      <i class="hud-stop" data-hud-stop data-label="VERANDA" style="--at:100%"></i>
+    </div>
+
+    <div class="hero-end">
+      <!-- F04 Kinetic headline: word masks + stagger, released when the descent settles -->
+      <h1 class="hero-title" data-words data-manual>Films for villas, from the <em class="serif">photos</em> you already have.</h1>
+      <div class="hero-side">
+        <p class="hero-sub">No crew, no drone, no visit. Send the photos you already own — within a week you have a 30-second film in three formats.</p>
+        <!-- F05 Magnetic buttons (data-mag) + custom cursor (dot, ring, PLAY/DRAG/CLOSE labels via data-cursor) — site.js, fine pointers only -->
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html" data-mag>Get a film <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#films" data-mag>Watch the films</a>
+        </div>
+        <p class="hero-micro mono">€100 per film while we build our showreel · regular €399</p>
+      </div>
+    </div>
+    <div class="hero-hint mono" aria-hidden="true">Scroll to descend</div>
+  </div>
+</section>
+
+<!-- F23 Section reveals: every [data-reveal] / [data-reveal-kids] / [data-words] below is staggered in by IntersectionObserver (site.js); mouse parallax on the hero layers lives in home.js -->
+
+<!-- F08 Marquee ticker of markets, logo symbols as separators, second row reversed, pauses on hover -->
+<section class="markets" id="markets" aria-label="Places we make films for">
+  <div class="marquee" data-speed="58">
+    <div class="marquee-track">
+      <ul class="marquee-list">
+        <li class="marquee-item">Bali<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Phuket<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Koh Samui<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Tulum<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Lombok<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Sri Lanka<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Maldives<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Da Nang<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Siargao<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Costa Rica<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Goa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Zanzibar<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Cabo<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Langkawi<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Hoi An<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Palawan<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Mexico City<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Dubai<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Cornwall<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marquee marquee--reverse" data-speed="44">
+    <div class="marquee-track">
+      <ul class="marquee-list">
+        <li class="marquee-item">Uluwatu<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Ubud<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Seminyak<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Krabi<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Gili Islands<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Kerala<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Mirissa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Nusa Penida<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Santa Teresa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Sayulita<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">El Nido<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Bentota<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Mui Ne<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Puerto Escondido<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Malé<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Miami<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">The Cotswolds<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+      </ul>
+    </div>
+  </div>
+  <p class="markets-cap mono">Working remotely, everywhere the light is good.</p>
+</section>
+
+<!-- F09 The three films: hover-to-play muted preview, custom play button, opens the custom lightbox player (F10) with sound -->
+<section class="section" id="films">
+  <div class="container">
+    <div class="sec-head sec-head--row" data-reveal-kids data-stagger>
+      <div class="stack">
+        <p class="eyebrow">Three films</p>
+        <h2 class="h2" data-words>Every frame is the <em class="serif">real</em> property.</h2>
+      </div>
+      <p class="lead">The movement is generated from the photographs themselves. Nothing invented, nothing added. Hover to preview, click to watch with sound.</p>
+    </div>
+    <div class="films-grid" data-reveal-kids data-stagger>
+      <a class="film-card" href="films.html#babylon" data-hoverplay data-player data-group="films" data-src="media/films/babylon.mp4" data-poster="media/films/babylon.jpg" data-title="Villa Babylon — Seseh, Bali" data-cursor="PLAY">
+        <div class="film-media">
+          <img src="media/films/babylon.jpg" width="1920" height="1080" alt="Villa Babylon, Seseh, Bali — film poster" loading="lazy" decoding="async">
+          <video data-src="media/films/babylon.mp4" data-preview="media/films/babylon-clip-1.mp4" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="film-shade" aria-hidden="true"></div>
+        <span class="play-btn" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-play"/></svg></span>
+        <div class="film-info">
+          <div><div class="film-title"><span class="sr-only">Play </span>Villa Babylon</div><div class="film-loc">Seseh, Bali</div></div>
+          <div class="film-meta mono">0:36 · 13 shots</div>
+        </div>
+      </a>
+      <a class="film-card" href="films.html#rimba" data-hoverplay data-player data-group="films" data-src="media/films/rimba.mp4" data-poster="media/films/rimba.jpg" data-title="Villa The Rimba — Ubud, Bali" data-cursor="PLAY">
+        <div class="film-media">
+          <img src="media/films/rimba.jpg" width="1920" height="1080" alt="Villa The Rimba, Ubud, Bali — film poster" loading="lazy" decoding="async">
+          <video data-src="media/films/rimba.mp4" data-preview="media/films/rimba-clip-1.mp4" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="film-shade" aria-hidden="true"></div>
+        <span class="play-btn" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-play"/></svg></span>
+        <div class="film-info">
+          <div><div class="film-title"><span class="sr-only">Play </span>Villa The Rimba</div><div class="film-loc">Ubud, Bali</div></div>
+          <div class="film-meta mono">0:35 · 13 shots</div>
+        </div>
+      </a>
+      <a class="film-card" href="films.html#aurora" data-hoverplay data-player data-group="films" data-src="media/films/aurora.mp4" data-poster="media/films/aurora.jpg" data-title="Aurora Villas — Canggu, Bali" data-cursor="PLAY">
+        <div class="film-media">
+          <img src="media/films/aurora.jpg" width="1920" height="1080" alt="Aurora Villas, Canggu, Bali — film poster" loading="lazy" decoding="async">
+          <video data-src="media/films/aurora.mp4" data-preview="media/films/aurora-clip-1.mp4" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="film-shade" aria-hidden="true"></div>
+        <span class="play-btn" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-play"/></svg></span>
+        <div class="film-info">
+          <div><div class="film-title"><span class="sr-only">Play </span>Aurora Villas</div><div class="film-loc">Canggu, Bali</div></div>
+          <div class="film-meta mono">0:24 · 13 shots</div>
+        </div>
+      </a>
+    </div>
+    <div class="films-foot" data-reveal="fade">
+      <p class="fine">Reference films, produced from publicly listed photos to show the method.</p>
+      <div class="row">
+        <button class="btn btn-ghost btn-sm" type="button" data-playall="films" data-end="That is the method. Yours next." data-end-cta="Get a film" data-end-href="contact.html" aria-label="Play all three films back to back"><svg class="icon icon--fill" aria-hidden="true" style="width:16px;height:16px"><use href="#i-play"/></svg> Play all</button>
+        <a class="link" href="films.html">See how they were made <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- F11 Photo → Film comparison: drag slider (pointer events + arrow keys), still photo left, moving film right -->
+<section class="section" id="method">
+  <div class="container">
+    <div class="sec-head" data-reveal-kids data-stagger>
+      <p class="eyebrow">The method</p>
+      <h2 class="h2" data-words>One photo in. One <em class="serif">shot</em> out.</h2>
+      <p class="lead">Drag the handle. On the left, the listing photo the owner already had. On the right, the same frame as it appears in the film.</p>
+    </div>
+    <div class="compare" data-reveal="scale" data-cursor="DRAG">
+      <div class="compare-photo"><img src="media/compare/babylon-photo.jpg" width="1920" height="1080" alt="Listing photo of Villa Babylon before the camera move" loading="lazy" decoding="async"></div>
+      <div class="compare-film"><video data-lazy data-src="media/compare/babylon-move.mp4" data-poster="assets/img/compare-film.jpg" muted loop playsinline preload="none" aria-label="The same frame of Villa Babylon as it appears in the film, with the camera moving"></video></div>
+      <span class="compare-label compare-label--l mono">Your photo</span>
+      <span class="compare-label compare-label--r mono">Your film</span>
+      <div class="compare-handle" role="slider" tabindex="0" aria-label="Drag to compare photo and film. Use the arrow keys to move." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal">
+        <span class="compare-knob"><svg class="icon" aria-hidden="true"><use href="#i-drag"/></svg></span>
+      </div>
+    </div>
+    <div class="compare-foot">
+      <p class="fine">Frame from Villa Babylon, Seseh, Bali.</p>
+      <p class="fine mono mono-lc">Photo · 1 frame → Film · 3 s move</p>
+    </div>
+  </div>
+</section>
+
+<!-- F12 Format morph: one frame morphs 16:9 → 9:16 → 4:5 with cycling labels, a real film poster inside -->
+<section class="section section--tight" id="formats">
+  <div class="container">
+    <div class="sec-head sec-head--center" data-reveal-kids data-stagger>
+      <p class="eyebrow eyebrow--plain">Three formats, one film</p>
+      <h2 class="h2" data-words>Cut once. Delivered <em class="serif">three</em> ways.</h2>
+      <p class="lead">Each format is reframed by hand, not cropped by a machine. The pool stays in the picture.</p>
+    </div>
+    <div class="morph" data-reveal="fade">
+      <div class="morph-frame" data-ratio="16:9">
+        <img src="media/films/rimba.jpg" width="1920" height="1080" alt="Villa The Rimba film frame, reframed for each format" loading="lazy" decoding="async">
+        <span class="morph-tag mono">16:9</span>
+      </div>
+      <ul class="morph-labels mono">
+        <li class="is-on"><button type="button"><b>16:9</b><span>Website &amp; YouTube</span></button></li>
+        <li><button type="button"><b>9:16</b><span>Reels, TikTok &amp; Shorts</span></button></li>
+        <li><button type="button"><b>4:5</b><span>Feed</span></button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- F13 How it works: sticky scene, scroll-driven progress line, step counter 01/02/03, one visual per step -->
+<section class="section hiw" id="how">
+  <div class="hiw-sticky container">
+    <div class="hiw-head">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2" data-words>From your photos to your film, within a <em class="serif">week.</em></h2>
+      </div>
+      <div class="hiw-line" aria-hidden="true"><div class="hiw-fill"></div></div>
+      <div class="hiw-num mono" aria-hidden="true"><b data-hiw-num>01</b><span>/ 03</span></div>
+    </div>
+
+    <div class="hiw-block">
+      <div class="hiw-step">
+        <p class="mono text-teal">Step 01</p>
+        <h3>You send photos</h3>
+        <p>A folder, a Drive link, or just the listing URL. Twelve good photos are enough. If the material cannot carry a film, we tell you before you pay anything.</p>
+      </div>
+      <div class="hiw-scene">
+        <div class="hiw-visual">
+          <div class="photo-stack" aria-hidden="true">
+            <img src="media/films/babylon-still-1.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+            <img src="media/films/babylon-still-2.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+            <img src="media/films/babylon-still-3.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+            <img src="media/films/babylon-still-4.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+          </div>
+          <span class="scene-tag mono">12+ photos · any folder</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-block">
+      <div class="hiw-step">
+        <p class="mono text-teal">Step 02</p>
+        <h3>We build the film</h3>
+        <p>Each photo becomes a slow, steady camera move. Thirteen shots, cut to music, graded as one piece, with an opening title and a closing card.</p>
+      </div>
+      <div class="hiw-scene">
+        <div class="hiw-visual">
+          <div class="strip" aria-hidden="true">
+            <div class="strip-main"><img src="media/films/rimba-still-2.jpg" width="960" height="540" alt="" loading="lazy" decoding="async"></div>
+            <div>
+              <div class="strip-track">
+                <img src="media/films/rimba-still-1.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <img src="media/films/rimba-still-2.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <img src="media/films/rimba-still-3.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <img src="media/films/rimba-still-4.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <img src="media/films/aurora-still-1.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <img src="media/films/aurora-still-2.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
+                <i class="strip-head"></i>
+              </div>
+              <div class="strip-meta mono"><span>13 shots · 0:30</span><span>Graded as one piece</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-block">
+      <div class="hiw-step">
+        <p class="mono text-teal">Step 03</p>
+        <h3>You receive three formats</h3>
+        <p>Widescreen for your website and YouTube, vertical for Reels and TikTok, 4:5 for the feed. Two rounds of changes included.</p>
+      </div>
+      <div class="hiw-scene">
+        <div class="hiw-visual">
+          <div class="formats" aria-hidden="true">
+            <figure class="f169"><img src="media/films/aurora.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"><figcaption>16:9</figcaption></figure>
+            <figure class="f916"><img src="media/films/aurora.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"><figcaption>9:16</figcaption></figure>
+            <figure class="f45"><img src="media/films/aurora.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"><figcaption>4:5</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-foot"><p class="hiw-end">Most of that week is us working, not you waiting on a call.</p></div>
+  </div>
+</section>
+
+<!-- F14 Portfolio scale "187": 187 tiles light up one by one, then the number counts up -->
+<section class="section has-bg" id="scale">
+  <div class="bg-loop" aria-hidden="true" style="--loop-opacity:.28">
+    <video data-lazy data-src="assets/video/loop-mist.mp4" data-poster="assets/video/loop-mist.jpg" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="container scale-grid">
+    <div data-reveal-kids data-stagger>
+      <p class="eyebrow">For property managers</p>
+      <div class="big-num"><span data-count="187" data-duration="2200">187</span><small>properties · one look · two weeks</small></div>
+      <h2 class="h2" data-words>Nobody sends a film crew to 187 villas.</h2>
+      <p class="lead">We don't have to. We make all 187 from the photos you already hold — the same look across the whole portfolio, delivered in batches. We make the first one, you approve it, then we run the rest.</p>
+      <div class="btn-row"><a class="btn btn-ghost" href="contact.html" data-mag>Ask for a per-property rate <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div>
+      <div class="tiles" data-reveal="fade" aria-hidden="true"></div>
+      <p class="tiles-cap">Each tile is one property. Every one of them gets a film.</p>
+    </div>
+  </div>
+</section>
+
+<!-- F15 Crew-vs-us calculator: range 1–200, cost/days/visits side by side, animated bars, assumptions visible -->
+<section class="section" id="calculator">
+  <div class="container">
+    <div class="sec-head" data-reveal-kids data-stagger>
+      <p class="eyebrow">Do the math</p>
+      <h2 class="h2" data-words>How many properties do you <em class="serif">manage</em>?</h2>
+    </div>
+    <div class="calc" data-reveal="fade">
+      <div>
+        <div class="calc-n"><span data-calc-n>40</span><small>properties</small></div>
+        <div class="calc-range">
+          <label class="label" for="calc-range">Properties</label>
+          <input class="range" id="calc-range" type="range" min="1" max="200" value="40" step="1" aria-valuemin="1" aria-valuemax="200" aria-valuenow="40">
+          <div class="calc-scale mono"><span>1</span><span>200</span></div>
+        </div>
+        <p class="calc-result" data-calc-result aria-live="polite"></p>
+        <div class="bars" aria-hidden="true">
+          <div class="bar-row"><span class="mono">Cost</span><div class="bar-pair"><div class="bar bar--crew"><i data-bar="cost-crew"></i></div><div class="bar bar--us"><i data-bar="cost-us"></i></div></div></div>
+          <div class="bar-row"><span class="mono">Time</span><div class="bar-pair"><div class="bar bar--crew"><i data-bar="time-crew"></i></div><div class="bar bar--us"><i data-bar="time-us"></i></div></div></div>
+        </div>
+        <div class="calc-legend mono" aria-hidden="true"><span><i style="background:var(--cream-30)"></i>Film crew</span><span><i style="background:var(--grad-a)"></i>Veranda Films</span></div>
+      </div>
+      <div class="calc-cols">
+        <div class="card calc-col">
+          <h3>Film crew <span class="mono">Assumption</span></h3>
+          <div class="calc-row"><span class="mono">Cost</span><span class="calc-v" data-calc="crew-cost">€32,000</span></div>
+          <div class="calc-row"><span class="mono">Working days</span><span class="calc-v" data-calc="crew-days">40 days</span></div>
+          <div class="calc-row"><span class="mono">Site visits</span><span class="calc-v" data-calc="crew-visits">40 visits</span></div>
+        </div>
+        <div class="card calc-col calc-col--us">
+          <h3>Veranda Films <span class="mono">Launch rate</span></h3>
+          <div class="calc-row"><span class="mono">Cost</span><span class="calc-v" data-calc="us-cost">€4,000</span></div>
+          <div class="calc-row"><span class="mono">Working days</span><span class="calc-v" data-calc="us-days">15 days</span></div>
+          <div class="calc-row"><span class="mono">Site visits</span><span class="calc-v" data-calc="us-visits">0 visits</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="fine calc-note">Assumption for the film-crew column: about €800 per property including travel, and about one property per day. Real crew quotes vary by market and season. Veranda Films column: €100 launch rate per film and about 15 films per week. Both columns exclude the cost of your own time.</p>
+  </div>
+</section>
+
+<!-- F16 Counters on scroll: 30 seconds · 13 shots · 3 formats · 2 rounds of changes · 0 site visits -->
+<section class="section section--tight has-bg" id="includes" aria-label="What every film includes">
+  <div class="bg-loop" aria-hidden="true" style="--loop-opacity:.22">
+    <video data-lazy data-src="assets/video/loop-palms.mp4" data-poster="assets/video/loop-palms.jpg" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="container">
+    <p class="eyebrow eyebrow--plain eyebrow--center mb-2" data-reveal="fade">What every film includes</p>
+    <div class="counters" data-reveal-kids data-stagger>
+      <div class="counter"><div class="counter-num" data-count="30">30</div><div class="counter-label">seconds</div></div>
+      <div class="counter"><div class="counter-num" data-count="13">13</div><div class="counter-label">shots</div></div>
+      <div class="counter"><div class="counter-num" data-count="3">3</div><div class="counter-label">formats</div></div>
+      <div class="counter"><div class="counter-num" data-count="2">2</div><div class="counter-label">rounds of changes</div></div>
+      <div class="counter"><div class="counter-num" data-count="0">0</div><div class="counter-label">site visits</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- F17 Services bento teaser: 7 cards (film + 6 add-ons) with mouse-follow spotlight, linking to services.html -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-head sec-head--split" data-reveal-kids data-stagger>
+      <div class="stack">
+        <p class="eyebrow">Also from the studio</p>
+        <h2 class="h2" data-words>The film is the <em class="serif">start.</em></h2>
+      </div>
+      <p class="lead">Everything below is made remotely by the same people, from the same material. Nobody visits the property.</p>
+    </div>
+    <div class="bento" data-reveal-kids data-stagger>
+      <a class="bento-card bento-card--film" href="services.html#film" data-spot>
+        <div class="card-media"><img src="assets/img/svc-film.webp" width="2000" height="1493" alt="Film still of a villa pool at dusk with a subtle widescreen frame" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span class="mono bento-kicker">The core service</span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">The film</h3><p class="bento-desc">Your property, in 30 seconds. Three formats. From the photos you have.</p></div>
+      </a>
+      <a class="bento-card" href="services.html#websites" data-spot>
+        <div class="card-media"><img src="assets/img/svc-website.webp" width="2000" height="1493" alt="Laptop on a teak table beside a villa pool, showing a dark villa website" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Websites</h3><p class="bento-desc">A direct-booking site like this one, with your film on top. Built in days.</p></div>
+      </a>
+      <a class="bento-card" href="services.html#presentations" data-spot>
+        <div class="card-media"><img src="assets/img/svc-presentation.webp" width="2000" height="1493" alt="Tablet showing a slide deck on a villa terrace at golden hour" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Presentations</h3><p class="bento-desc">Owner reports, investor decks, portfolio pitches. On brand, in PDF, PowerPoint or web.</p></div>
+      </a>
+      <a class="bento-card" href="services.html#copy" data-spot>
+        <div class="card-media"><img src="assets/img/svc-copy.webp" width="2000" height="1493" alt="Open notebook and laptop with listing text on a tropical desk" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Listing copy &amp; translation</h3><p class="bento-desc">Titles and descriptions rewritten in your property's tone, in up to ten languages.</p></div>
+      </a>
+      <a class="bento-card" href="services.html#social" data-spot>
+        <div class="card-media"><img src="assets/img/svc-social.webp" width="2000" height="1493" alt="Smartphone showing a vertical villa film, held beside a pool" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Social content kit</h3><p class="bento-desc">Thirty days of captions, hashtags and vertical cut-downs from the film.</p></div>
+      </a>
+      <a class="bento-card bento-card--wide" href="services.html#photo" data-spot>
+        <div class="card-media"><img src="assets/img/svc-photo.webp" width="2000" height="1493" alt="The same villa photo split in two, daylight on the left and relit dusk on the right" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Photo polish</h3><p class="bento-desc">Relighting, dusk versions, decluttering and upscaling of the photos you already have.</p></div>
+      </a>
+      <a class="bento-card bento-card--wide" href="services.html#narration" data-spot>
+        <div class="card-media"><img src="assets/img/svc-narration.webp" width="2000" height="1125" alt="Cinematic film still of a villa with a subtitle bar at the bottom" loading="lazy" decoding="async"></div>
+        <div class="bento-top"><span></span><span class="bento-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-ne"/></svg></span></div>
+        <div class="bento-body"><h3 class="bento-title">Narrated films</h3><p class="bento-desc">Your film with a voiceover in any language, plus subtitles.</p></div>
+      </a>
+    </div>
+    <div class="films-foot" data-reveal="fade">
+      <p class="fine">Guest guidebooks and brand kits too — all of it on the services page.</p>
+      <a class="link" href="services.html">See all services <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- F18 Pricing: toggle One property / Portfolio swaps the card (the F20 badge lives in the CTA band as the back-to-top control) -->
+<section class="section has-bg" id="pricing">
+  <div class="bg-loop" aria-hidden="true" style="--loop-opacity:.24">
+    <video data-lazy data-src="assets/video/loop-pool.mp4" data-poster="assets/video/loop-pool.jpg" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="container pricing">
+    <div class="pricing-left" data-reveal-kids data-stagger>
+      <div class="sec-head">
+        <p class="eyebrow">Pricing</p>
+        <h2 class="h2" data-words>One property, one film, one <em class="serif">price.</em></h2>
+      </div>
+      <div class="toggle" data-toggle="pricing" data-active="0" role="tablist" aria-label="Pricing for one property or a portfolio">
+        <span class="toggle-thumb" aria-hidden="true"></span>
+        <button class="toggle-btn" type="button" role="tab" id="tab-one" data-toggle-btn aria-selected="true" aria-controls="price-one">One property</button>
+        <button class="toggle-btn" type="button" role="tab" id="tab-portfolio" data-toggle-btn aria-selected="false" aria-controls="price-portfolio">Portfolio</button>
+      </div>
+      <p class="small measure">Half up front, half on delivery. Two rounds of changes. You own the film outright, for any use.</p>
+    </div>
+    <div class="price-cards" data-reveal="fade">
+      <div class="card card--pad-lg price-card" id="price-one" role="tabpanel" aria-labelledby="tab-one" data-toggle-panel="0" data-toggle-for="pricing">
+        <div class="price-head"><span class="price">€100</span><span class="price-was"><span class="sr-only">Regular price </span>€399</span></div>
+        <p class="price-why mono">Launch rate while we build our showreel</p>
+        <ul class="price-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>One 30-second film in 16:9, 9:16 and 4:5</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Built from your existing photos</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Opening title and closing card</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Music, color grade, thirteen shots</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Two rounds of changes</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Delivered within a week</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Half up front, half on delivery</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>You own the film outright</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html" data-mag>Get a film <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="price-fine fine">No subscription, no retainer, nothing to cancel.</p>
+      </div>
+      <div class="card card--pad-lg price-card price-card--portfolio" id="price-portfolio" role="tabpanel" aria-labelledby="tab-portfolio" data-toggle-panel="1" data-toggle-for="pricing">
+        <p class="price-why mono">Portfolio</p>
+        <h3 class="h3">A per-property rate that drops with volume.</h3>
+        <p class="muted">Same look across every listing, delivered in batches. Tell us how many properties you manage and we send numbers the same day. We make the first one before you commit to the rest.</p>
+        <ul class="price-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>One look across the whole portfolio</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>First film approved before the batch runs</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Delivered in batches, on an agreed schedule</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Three formats and two rounds of changes, every film</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html" data-mag>Tell us how many <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="price-fine fine">Rates are quoted per portfolio. We do not publish a table because every portfolio is different.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- F19 FAQ accordion (6 items, incl. the honest "Is this AI?") -->
+<section class="section" id="faq">
+  <div class="container-narrow">
+    <div class="sec-head" data-reveal-kids data-stagger>
+      <p class="eyebrow">Questions</p>
+      <h2 class="h2" data-words>Questions people actually <em class="serif">ask.</em></h2>
+    </div>
+    <div class="acc" data-single data-reveal="fade">
+      <div class="acc-item is-open">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b1" aria-expanded="true" aria-controls="faq-p1">Is this AI?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p1" role="region" aria-labelledby="faq-b1"><div><p class="acc-body">The movement is generated from your own photographs. It is your property in every frame — nothing invented, nothing added, no rooms that do not exist. That is exactly why we can deliver within a week without anyone walking through the building. We never present it as drone footage, and we ask that you do not either.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b2" aria-expanded="false" aria-controls="faq-p2">We already paid for professional photos.<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p2" role="region" aria-labelledby="faq-b2"><div><p class="acc-body">Good. That is what makes this work. You paid for the hard part; this turns it into something that moves. The better the photos, the better the film.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b3" aria-expanded="false" aria-controls="faq-p3">What if the result is not good?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p3" role="region" aria-labelledby="faq-b3"><div><p class="acc-body">Two rounds of changes are included. If the source photos cannot carry a film, we say so before you pay, not after.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b4" aria-expanded="false" aria-controls="faq-p4">Can you do all our properties?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p4" role="region" aria-labelledby="faq-b4"><div><p class="acc-body">Yes, and that is the part we are best at. Nobody sends a film crew to forty properties. We make the first one, you approve it, then we run the rest in batches with a per-property rate that drops with volume.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b5" aria-expanded="false" aria-controls="faq-p5">Who owns the film?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p5" role="region" aria-labelledby="faq-b5"><div><p class="acc-body">You do, outright, for any use — your website, your listings, your ads, your socials. We ask permission before showing it in our own portfolio, and we accept no as an answer.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b6" aria-expanded="false" aria-controls="faq-p6">How long does it take?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p6" role="region" aria-labelledby="faq-b6"><div><p class="acc-body">Within a week from the day your photos arrive. Portfolios are delivered in batches; we agree the schedule with you before we start.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band with the villa loop. F20 rotating badge as the back-to-top button (near the footer) -->
+<section class="cta-band has-bg" id="cta">
+  <div class="bg-loop bg-loop--ink" aria-hidden="true" style="--loop-opacity:.5">
+    <video data-lazy data-src="assets/video/loop-infinity.mp4" data-poster="assets/video/loop-infinity.jpg" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="container" data-reveal-kids data-stagger>
+    <p class="eyebrow eyebrow--plain">Your property, in 30 seconds</p>
+    <h2 class="h1" data-words>Send the <em class="serif">photos.</em> We do the rest.</h2>
+    <p class="lead">Within a week you have a film in three formats. €100 while we build our showreel, regular €399.</p>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn btn-primary btn-lg" href="contact.html" data-mag>Get a film <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button class="btn btn-ghost btn-lg" type="button" data-playall="films" data-end="That is the method. Yours next." data-end-cta="Get a film" data-end-href="contact.html">Watch the films</button>
+    </div>
+  </div>
+  <!-- F20 Rotating badge as the back-to-top button -->
+  <div class="cta-badge">
+    <button class="badge" type="button" data-top aria-label="Made from your photos • No crew • No drone • No visit • Back to top">
+      <svg class="badge-ring" viewBox="0 0 160 160" aria-hidden="true"><defs><path id="badge-path-2" d="M80,80 m-66,0 a66,66 0 1,1 132,0 a66,66 0 1,1 -132,0"/></defs><text><textPath href="#badge-path-2">Made from your photos • No crew • No drone • No visit •</textPath></text></svg>
+      <svg class="badge-symbol" aria-hidden="true"><use href="#vf-symbol"/></svg>
+    </button>
+  </div>
+</section>
+
+</main>
+
+<!-- F21 Footer: logo, live Bali clock, links, Instagram, email, © line, orbit animation (3 rings around the symbol) -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="Veranda Films — home"><img src="assets/img/logo.svg" alt="Veranda Films" width="1589" height="512" loading="lazy" decoding="async"></a>
+        <p class="footer-tag">Cinematic films for villas, made from the photos you already have.</p>
+        <p class="footer-time mono">Bali time <span data-bali-time>--:--</span> · usually replies within one working day</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-h">Studio</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="websites.html">Websites</a></li>
+          <li><a href="studio.html">Studio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-h">Reach us</p>
+        <ul>
+          <li><a href="mailto:hello@verandafilms.com?subject=A%20film%20for%20my%20property">hello@verandafilms.com</a></li>
+          <li><a href="https://instagram.com/verandafilms" target="_blank" rel="noopener">Instagram</a></li>
+          <li data-whatsapp-wrap><a href="#" data-whatsapp>WhatsApp us</a></li>
+          <li data-youtube-wrap><a href="#" data-youtube>YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-h">Small print</p>
+        <p>Reference films are produced from publicly listed photos to show the method. Every film is made remotely; nothing is presented as drone or on-site footage.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2026 Veranda Films — Bali, Indonesia</span>
+      <span class="mono">Canggu · UTC+8 · hello@verandafilms.com</span>
+    </div>
+  </div>
+  <div class="orbit" aria-hidden="true">
+    <i class="ring ring-1"></i><i class="ring ring-2"></i><i class="ring ring-3"></i>
+    <svg class="orbit-symbol"><use href="#vf-symbol"/></svg>
+  </div>
+</footer>
+
+<!-- F10 Custom lightbox player: sound on, teal→gold progress, ESC/close, keyboard (Space, ←/→ seek, M, N/P), showreel queue -->
+<dialog class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Film player">
+  <div class="lb-stage">
+    <div class="lb-frame">
+      <video class="lb-video" playsinline preload="none"></video>
+      <div class="lb-end" hidden>
+        <p class="lb-end-text">That is the method. Yours next.</p>
+        <a class="btn btn-primary" href="contact.html">Get a film</a>
+      </div>
+    </div>
+    <div class="lb-bar">
+      <button class="lb-btn" type="button" data-lb-play aria-label="Pause film">
+        <svg class="icon" data-when="paused" aria-hidden="true"><use href="#i-play"/></svg>
+        <svg class="icon" data-when="playing" aria-hidden="true"><use href="#i-pause"/></svg>
+      </button>
+      <div class="lb-progress" data-lb-progress role="slider" tabindex="0" aria-label="Film progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="lb-fill"></div></div>
+      <span class="lb-time mono">0:00 / 0:00</span>
+      <button class="lb-btn" type="button" data-lb-mute aria-label="Mute">
+        <svg class="icon" data-when="unmuted" aria-hidden="true"><use href="#i-sound"/></svg>
+        <svg class="icon" data-when="muted" aria-hidden="true"><use href="#i-mute"/></svg>
+      </button>
+    </div>
+    <p class="lb-title"></p>
+  </div>
+  <button class="lb-close" type="button" data-lb-close aria-label="Close player" data-cursor="CLOSE"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-nav lb-prev" type="button" data-lb-prev aria-label="Previous film"><svg class="icon" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+  <button class="lb-nav lb-next" type="button" data-lb-next aria-label="Next film"><svg class="icon" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  <p class="lb-hint mono" hidden>Press Esc to close · Space to pause</p>
+</dialog>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/home.js" defer></script>
+</body>
+</html>

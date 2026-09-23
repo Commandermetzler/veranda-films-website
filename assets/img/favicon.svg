@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><defs>
+<linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC46B"/><stop offset="1" stop-color="#FF5E4A"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD08A"/><stop offset="1" stop-color="#FF6A4A"/></linearGradient>
+<linearGradient id="teal" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BF0E1"/><stop offset="1" stop-color="#2D7CFF"/></linearGradient>
+<linearGradient id="dusk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF9A4C"/><stop offset=".38" stop-color="#E4447E"/><stop offset=".72" stop-color="#3A2A93"/><stop offset="1" stop-color="#0A0F1E"/></linearGradient>
+<linearGradient id="streak" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2FD6C9" stop-opacity="0"/><stop offset="1" stop-color="#2FD6C9"/></linearGradient>
+<linearGradient id="streak2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFB36B" stop-opacity="0"/><stop offset="1" stop-color="#FF7A4A"/></linearGradient>
+</defs><rect width="512" height="512" rx="112.6" ry="112.6" fill="#0A0F1E"/><g transform="translate(61.44 61.44) scale(0.76)"><polygon points="92,108 180,108 280,404 220,404" fill="url(#gold)"/>
+<polygon points="332,108 420,108 292,404 232,404" fill="url(#teal)" style="mix-blend-mode:screen"/>
+<polygon points="228,138 228,210 290,174" fill="#F4EFE6"/></g></svg>
