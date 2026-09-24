@@ -11,7 +11,7 @@
 
   /* ---------- config (edit here) ---------- */
   var CONFIG = {
-    WHATSAPP_NUMBER: '',            // E.164 digits, e.g. "6281234567890" — empty hides every WhatsApp link
+    WHATSAPP_NUMBER: '6285190751710',            // E.164 digits, e.g. "6281234567890" — empty hides every WhatsApp link
     YOUTUBE_URL: '',                // e.g. "https://www.youtube.com/@verandafilms" — empty hides YouTube links
     WHATSAPP_TEXT: 'Hi Veranda Films — I would like a film for my property. Name: [ ] Location: [ ] Number of properties: [ ]',
     INSTAGRAM_URL: 'https://instagram.com/verandafilms',
