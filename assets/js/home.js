@@ -370,7 +370,7 @@
       var save = crewCost - usCost, days = crewDays - usDays;
       if (out.result) {
         out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + eur(save) + '</b>' +
-          (days > 0 ? ' and roughly <b>' + days + ' working days</b>.' : ', and the film arrives <b>within a week</b>.');
+          (days > 0 ? ' and roughly <b>' + days + ' working days</b>.' : ', and the film arrives in <b>about a week</b>.');
       }
       range.style.setProperty('--p', ((n - 1) / 199 * 100).toFixed(2) + '%');
       range.setAttribute('aria-valuenow', n);
