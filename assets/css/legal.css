@@ -1,0 +1,13 @@
+/* ═══ Veranda Films — legal.html ═══ */
+.legal-head .container-narrow{display:grid;gap:1.2rem}
+.legal-kicker{color:var(--cream-60);letter-spacing:.2em}
+.legal-toc{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;margin-top:.4rem}
+.legal-toc a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,208,138,.35)}
+.legal-body{padding-block:2rem 6rem}
+.legal-text{max-width:760px;line-height:1.7}
+.legal-text h2{margin:3rem 0 1rem;font-size:clamp(1.4rem,2.2vw,1.9rem);scroll-margin-top:110px}
+.legal-text h3{margin:2rem 0 .6rem;font-size:1.1rem}
+.legal-text p,.legal-text li{color:var(--cream-80,rgba(244,239,230,.82))}
+.legal-text p{margin:0 0 1rem}
+.legal-text ul{margin:0 0 1rem 1.2rem;padding:0;display:grid;gap:.4rem}
+.legal-text a{color:var(--gold)}
