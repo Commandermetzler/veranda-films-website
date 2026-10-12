@@ -1,7 +1,6 @@
-/* Veranda Films — contact.html (F36): message composer → mailto, copy, query-param prefill */
+/* Veranda Films — contact.html (F36): message composer → FormSubmit POST (hello@), copy, query-param prefill, ?sent=1 thank-you */
 (function () {
   'use strict';
-  var EMAIL = (window.VF && VF.config && VF.config.EMAIL) || 'hello@verandafilms.com';
   var toast = function (m) { if (window.VF && VF.toast) VF.toast(m); };
   var param = function (n) {
     try { return new URLSearchParams(location.search).get(n) || ''; } catch (e) { return ''; }
@@ -14,12 +13,14 @@
     if (!form) return;
     var f = {
       name: form.querySelector('#c-name'),
+      email: form.querySelector('#c-email'),
       property: form.querySelector('#c-property'),
       location: form.querySelector('#c-location'),
       count: form.querySelector('#c-count'),
       message: form.querySelector('#c-message')
     };
-    var checks = Array.prototype.slice.call(form.querySelectorAll('input[name="need"]'));
+    var checks = Array.prototype.slice.call(form.querySelectorAll('input[data-need]'));
+    var needsField = form.querySelector('[data-needs-field]');
     var composed = document.getElementById('composed');
     var pvSubject = document.querySelector('[data-preview-subject]');
     var pvBody = document.querySelector('[data-preview-body]');
@@ -61,7 +62,7 @@
     }
     function build() {
       var v = {
-        name: clean(f.name.value), property: clean(f.property.value), location: clean(f.location.value),
+        name: clean(f.name.value), email: clean(f.email ? f.email.value : ''), property: clean(f.property.value), location: clean(f.location.value),
         count: clean(f.count.value), message: String(f.message.value || '').trim().slice(0, 4000)
       };
       var list = needs();
@@ -69,13 +70,14 @@
       var subject = subjectParts.join(' — ') || 'A film for my property';
       var lines = [];
       if (v.name) lines.push('Name: ' + v.name);
-      if (v.property) lines.push('Property: ' + v.property);
+      if (v.email) lines.push('Email: ' + v.email);
+      if (v.property) lines.push('Company or property: ' + v.property);
       if (v.location) lines.push('Location: ' + v.location);
       if (v.count) lines.push('Number of properties: ' + v.count);
       if (list.length) lines.push('I need: ' + list.join(' / ').toLowerCase());
       var body = 'Hi Veranda Films,' + (lines.length ? '\n\n' + lines.join('\n') : '') + (v.message ? '\n\n' + v.message : '');
-      var any = v.name || v.property || v.location || v.count || v.message || list.length;
-      return { subject: subject, body: body, any: !!any, valid: !!(v.name && v.message), v: v, list: list };
+      var any = v.name || v.email || v.property || v.location || v.count || v.message || list.length;
+      return { subject: subject, body: body, any: !!any, valid: !!(v.name && v.message && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)), v: v, list: list };
     }
     function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
     function ph(v, p) { return v ? esc(v) : '<span class="ph">' + p + '</span>'; }
@@ -86,12 +88,14 @@
       if (pvBody) {
         pvBody.innerHTML = 'Hi Veranda Films,\n\n' +
           'Name: ' + ph(r.v.name, 'your name') + '\n' +
-          'Property: ' + ph(r.v.property, 'villa name or company') + '\n' +
+          'Email: ' + ph(r.v.email, 'you@company.com') + '\n' +
+          'Company or property: ' + ph(r.v.property, 'villa name or company') + '\n' +
           'Location: ' + ph(r.v.location, 'town, island or country') + '\n' +
           'Number of properties: ' + ph(r.v.count, '1') + '\n' +
           'I need: ' + ph(r.list.join(' / ').toLowerCase(), 'film / website / presentation / other') + '\n\n' +
           ph(r.v.message, 'A link to your listing is the fastest way to start.');
       }
+      if (needsField) needsField.value = r.list.join(', ');
       if (msgLine && r.valid) msgLine.textContent = '';
       return r;
     }
@@ -99,20 +103,26 @@
     form.addEventListener('change', render);
     render();
 
-    /* ---- send: opens the visitor's own email app (no backend, nothing stored) ---- */
+    /* ---- send: real POST to FormSubmit (reCAPTCHA step on their page, then back to ?sent=1) ---- */
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var r = build();
+      var r = render();
       if (!r.valid) {
-        if (msgLine) msgLine.textContent = 'Add your name and a short message first.';
-        (r.v.name ? f.message : f.name).focus();
+        e.preventDefault();
+        if (msgLine) msgLine.textContent = 'Add your name, a valid email and a short message first.';
+        (!r.v.name ? f.name : (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.v.email) ? f.email : f.message)).focus();
         return;
       }
-      if (msgLine) msgLine.textContent = '';
-      var href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(r.subject) + '&body=' + encodeURIComponent(r.body);
-      toast('Opening your email app');
-      setTimeout(function () { window.location.href = href; }, 120);
+      if (msgLine) msgLine.textContent = 'Sending…';
+      /* no preventDefault: the browser posts the form to formsubmit.co */
     });
+
+    /* ---- thank-you after FormSubmit redirects back with ?sent=1 ---- */
+    if (param('sent') === '1') {
+      if (msgLine) msgLine.textContent = 'Thank you. Your message is with us, we reply by email, usually the same day.';
+      toast('Message sent, thank you');
+      var w2 = document.getElementById('write');
+      if (w2) setTimeout(function () { w2.scrollIntoView({ block: 'start' }); }, 300);
+    }
 
     /* ---- Copy message (site.js data-copy-from reads #composed): refresh before the shared handler runs ---- */
     var copyBtn = form.querySelector('[data-copy-from="#composed"]');

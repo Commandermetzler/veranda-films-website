@@ -360,7 +360,7 @@
     function bar(el, w) { if (el) el.style.setProperty('--w', clamp(w, .02, 1).toFixed(3)); }
     function update() {
       var n = parseInt(range.value, 10) || 1;
-      var crewCost = n * 800, crewDays = n, usCost = n * 100, usDays = Math.ceil(n / 15) * 5;
+      var crewCost = n * 800, crewDays = n, usCost = n * 249, usDays = Math.ceil(n / 15) * 5;
       out.n.forEach(function (el) { el.textContent = n; });
       txt(out.crewCost, eur(crewCost)); txt(out.crewDays, crewDays + (crewDays === 1 ? ' day' : ' days')); txt(out.crewVisits, n + (n === 1 ? ' visit' : ' visits'));
       txt(out.usCost, eur(usCost)); txt(out.usDays, usDays + ' days'); txt(out.usVisits, '0 visits');

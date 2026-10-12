@@ -215,7 +215,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
 
 <div class="beam-divider" aria-hidden="true"></div>
 
-<!-- F36 Message composer: builds a mailto: link (no backend) + copy message + live preview; prefilled from ?name=&location=&vibe=&palette= -->
+<!-- F36 Message composer: real form via FormSubmit (POST → hello@verandafilms.com, reCAPTCHA on, honeypot) + copy message + live preview; prefilled from ?name=&location=&vibe=&palette= ; ?sent=1 shows thank-you -->
 <section class="section has-bg" id="write">
   <div class="bg-loop bg-loop--ink" aria-hidden="true" style="--loop-opacity:.22">
     <video data-lazy data-src="assets/video/loop-curtain.mp4" data-poster="assets/video/loop-curtain.jpg" muted loop playsinline preload="none"></video>
@@ -226,25 +226,31 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
         <p class="eyebrow">Message composer</p>
         <h2 class="h2" data-words>Write to <em class="serif">us.</em></h2>
       </div>
-      <p class="lead">Fill this in and press send. It opens your email app with the message ready. Or copy it and paste it anywhere.</p>
+      <p class="lead">Fill this in and press send. It comes straight to our inbox and we answer by email, usually the same day.</p>
     </div>
     <div class="composer">
-      <form class="card composer-form" id="composer" action="mailto:hello@verandafilms.com" method="get" novalidate data-reveal>
+      <form class="card composer-form" id="composer" action="https://formsubmit.co/hello@verandafilms.com" method="POST" accept-charset="UTF-8" novalidate data-reveal>
+        <input type="hidden" name="_subject" value="Veranda website enquiry">
+        <input type="hidden" name="_next" value="https://verandafilms.com/contact.html?sent=1#write">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="needs" value="" data-needs-field>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="composer-row">
           <div class="field"><label class="label" for="c-name">Your name</label><input class="input" id="c-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
-          <div class="field"><label class="label" for="c-property">Property</label><input class="input" id="c-property" name="property" type="text" placeholder="Villa name or company" autocomplete="organization"></div>
+          <div class="field"><label class="label" for="c-email">Your email</label><input class="input" id="c-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required></div>
         </div>
         <div class="composer-row">
-          <div class="field"><label class="label" for="c-location">Location</label><input class="input" id="c-location" name="location" type="text" placeholder="Town, island or country"></div>
-          <div class="field"><label class="label" for="c-count">Number of properties</label><input class="input" id="c-count" name="count" type="number" inputmode="numeric" min="1" max="9999" placeholder="1"></div>
+          <div class="field"><label class="label" for="c-property">Company or property</label><input class="input" id="c-property" name="company" type="text" placeholder="Villa name or company" autocomplete="organization"></div>
+          <div class="field"><label class="label" for="c-count">Number of properties</label><input class="input" id="c-count" name="properties" type="number" inputmode="numeric" min="1" max="9999" placeholder="1"></div>
         </div>
+        <div class="field"><label class="label" for="c-location">Location</label><input class="input" id="c-location" name="location" type="text" placeholder="Town, island or country"></div>
         <fieldset class="field" style="border:0;padding:0;margin:0;min-width:0">
           <legend class="label" style="padding:0;margin-bottom:.55rem">What you need</legend>
           <div class="composer-checks">
-            <label class="check"><input type="checkbox" name="need" value="Film"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Film</label>
-            <label class="check"><input type="checkbox" name="need" value="Website"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Website</label>
-            <label class="check"><input type="checkbox" name="need" value="Presentation"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Presentation</label>
-            <label class="check"><input type="checkbox" name="need" value="Other"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Other</label>
+            <label class="check"><input type="checkbox" data-need value="Film"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Film</label>
+            <label class="check"><input type="checkbox" data-need value="Website"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Website</label>
+            <label class="check"><input type="checkbox" data-need value="Presentation"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Presentation</label>
+            <label class="check"><input type="checkbox" data-need value="Other"><span class="check-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Other</label>
           </div>
         </fieldset>
         <div class="field"><label class="label" for="c-message">Message</label><textarea class="textarea" id="c-message" name="message" placeholder="A link to your listing is the fastest way to start." required></textarea></div>
@@ -253,7 +259,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
           <button class="btn btn-primary" type="submit" data-mag>Send the message <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg></button>
           <button class="btn btn-ghost" type="button" data-copy="" data-copy-from="#composed" data-toast="Message copied — paste it anywhere" data-toast-empty="Nothing to copy yet"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Copy message</button>
         </div>
-        <p class="fine">Nothing is stored on this site. The message travels through your own email app.</p>
+        <p class="fine">Your message is forwarded to us by FormSubmit (formsubmit.co) and used only to answer you. Details in our <a href="legal.html">privacy notice</a>.</p>
         <textarea id="composed" class="sr-only" tabindex="-1" aria-hidden="true" readonly></textarea>
       </form>
       <aside class="card card--ink composer-preview" aria-label="Message preview" data-reveal="fade">
