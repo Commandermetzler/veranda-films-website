@@ -2,5 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /join-9f3k2/
 
 Sitemap: https://verandafilms.com/sitemap.xml
