@@ -11,3 +11,6 @@
 .legal-text p{margin:0 0 1rem}
 .legal-text ul{margin:0 0 1rem 1.2rem;padding:0;display:grid;gap:.4rem}
 .legal-text a{color:var(--gold)}
+/* 08.11.2026: text-only page heads never depend on the reveal animation — a blank first screen costs trust */
+html.js .legal-head [data-reveal-kids] > *{opacity:1;transform:none;transition:none}
+.legal-head .w > span{transform:none;transition:none}

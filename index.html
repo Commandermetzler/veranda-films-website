@@ -42,15 +42,16 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://verandafilms.com/#org","name":"Veranda Films","alternateName":"Veranda Films Bali","url":"https://verandafilms.com/","email":"hello@verandafilms.com","logo":"https://verandafilms.com/assets/img/icon-512.png","image":"https://verandafilms.com/assets/img/og.jpg","description":"Veranda Films is a Bali-based studio that turns the photos a villa or hotel already has into a cinematic 30-second film, delivered in three formats in about a week, with no crew, no shoot and no site visit. The studio also builds direct-booking websites, presentations, listing copy and translation, social content kits, photo polish, narrated films and guest guidebooks — all produced remotely.","foundingDate":"2026","address":{"@type":"PostalAddress","addressLocality":"Canggu","addressRegion":"Bali","addressCountry":"ID"},"areaServed":["Indonesia","Thailand","Vietnam","Philippines","Malaysia","Sri Lanka","Maldives","India","Mexico","Costa Rica","United States","United Arab Emirates","United Kingdom"],"sameAs":["https://www.instagram.com/veranda.films/","https://www.youtube.com/@verandafilms"]},
+{"@type":"Organization","@id":"https://verandafilms.com/#org","name":"Veranda Films","url":"https://verandafilms.com/","email":"hello@verandafilms.com","logo":"https://verandafilms.com/assets/img/icon-512.png","image":"https://verandafilms.com/assets/img/og.jpg","description":"Veranda Films is a Bali-based studio that turns the photos a villa or hotel already has into a cinematic 30-second film, delivered in three formats in about a week, with no crew, no shoot and no site visit. The studio also builds direct-booking websites, presentations, listing copy and translation, social content kits, photo polish, narrated films and guest guidebooks — all produced remotely.","foundingDate":"2026","address":{"@type":"PostalAddress","addressLocality":"Canggu","addressRegion":"Bali","addressCountry":"ID"},"areaServed":["United States","Mexico","Australia","New Zealand","United Arab Emirates","United Kingdom","Brazil","Indonesia","Thailand"],"sameAs":["https://www.instagram.com/veranda.films/","https://www.youtube.com/@verandafilms"]},
 {"@type":"WebSite","@id":"https://verandafilms.com/#website","url":"https://verandafilms.com/","name":"Veranda Films","publisher":{"@id":"https://verandafilms.com/#org"}},
-{"@type":"Service","name":"Cinematic villa film from existing photos","serviceType":"Video production","provider":{"@id":"https://verandafilms.com/#org"},"areaServed":"Worldwide","description":"A 30-second cinematic film of a villa, hotel or holiday rental, generated from the property's existing photographs. Thirteen shots cut to music, color graded, with opening title and closing card, delivered in 16:9, 9:16 and 4:5 in about a week. No crew, no shoot, no site visit. Two rounds of changes included.","offers":[{"@type":"Offer","price":"150","priceCurrency":"EUR","url":"https://verandafilms.com/contact.html","description":"Price per film. Less from 3 films; portfolio rates on request."}]},
+{"@type":"Service","name":"Cinematic villa film from existing photos","serviceType":"Video production","provider":{"@id":"https://verandafilms.com/#org"},"areaServed":"Worldwide","description":"A 30-second cinematic film of a villa, hotel or holiday rental, generated from the property's existing photographs. Ten to ten to thirteen shots cut to music, color graded, with opening title and closing card, delivered in 16:9, 9:16 and 4:5 in about a week. No crew, no shoot, no site visit. Two rounds of changes included.","offers":[{"@type":"Offer","price":"150","priceCurrency":"EUR","url":"https://verandafilms.com/contact.html","description":"Price per film. Less from 3 films; portfolio rates on request."}]},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Is this AI?","acceptedAnswer":{"@type":"Answer","text":"Yes. AI adds the camera movement to your own photos. We check every clip against the original photo, cut anything that isn't in it, and you approve the film before anyone sees it. It is also why we can deliver in about a week without anyone walking through the building. We never present it as drone footage, and we ask that you do not either."}},
 {"@type":"Question","name":"We already paid for professional photos.","acceptedAnswer":{"@type":"Answer","text":"Good. That is what makes this work. You paid for the hard part; this turns it into something that moves. The better the photos, the better the film."}},
 {"@type":"Question","name":"What if the result is not good?","acceptedAnswer":{"@type":"Answer","text":"Two rounds of changes are included. If the source photos cannot carry a film, we say so before you pay, not after."}},
 {"@type":"Question","name":"Can you do all our properties?","acceptedAnswer":{"@type":"Answer","text":"Yes, and that is the part we are best at. Nobody sends a film crew to forty properties. We make the first one, you approve it, then we run the rest in batches with a per-property rate that drops with volume."}},
 {"@type":"Question","name":"Who owns the film?","acceptedAnswer":{"@type":"Answer","text":"It is yours to use everywhere, with no time limit — your website, your listings, your ads, your social media. Finished films also appear in our portfolio as references."}},
+{"@type":"Question","name":"Your examples are all in Bali. Does this work for a cabin in Tennessee?","acceptedAnswer":{"@type":"Answer","text":"Yes. The method only needs your photos; the location does not matter. Bali is where we started, so that is where the first permissions came from. Your first film costs nothing until you approve it."}},
 {"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"About a week from the day your photos arrive. Any portfolio size works; larger orders are delivered in batches on a schedule we agree upfront."}}
 ]}
 ]}
@@ -158,9 +159,10 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
     <video class="hero-video" data-src="assets/video/hero-mobile.mp4" data-poster="assets/seq/hero/poster-960.jpg" muted loop playsinline preload="none" aria-label="A continuous descent from Earth orbit to a villa pool at dusk"></video>
     <div class="hero-shade" aria-hidden="true"></div>
+    <p class="hero-pin mono">30-second films of your properties, from the photos you already have · €150 per film · the first one is paid only after you approve it</p>
 
     <div class="hero-captions">
-      <p class="cap">Nobody sends a film crew to 187 villas.</p>
+      <p class="cap">Nobody sends a film crew to 187 vacation rentals.</p>
       <p class="cap">We don't have to.</p>
       <p class="cap">A cinematic film of every property — from the <em class="serif">photos</em> you already have.</p>
     </div>
@@ -203,48 +205,48 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
   <div class="marquee" data-speed="58">
     <div class="marquee-track">
       <ul class="marquee-list">
+        <li class="marquee-item">Miami<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Orlando<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Outer Banks<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Gulf Shores<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Scottsdale<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Lake Tahoe<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Hilton Head<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Smoky Mountains<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Cabo<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Tulum<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Dubai<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Bali<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Phuket<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Koh Samui<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Tulum<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Lombok<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Sri Lanka<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Maldives<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Da Nang<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Siargao<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Costa Rica<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Goa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Zanzibar<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Cabo<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Langkawi<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Hoi An<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Palawan<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Mexico City<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Dubai<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Cornwall<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Gold Coast<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Queenstown<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
       </ul>
     </div>
   </div>
   <div class="marquee marquee--reverse" data-speed="44">
     <div class="marquee-track">
       <ul class="marquee-list">
+        <li class="marquee-item">Destin<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Myrtle Beach<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Big Bear<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Sedona<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Palm Springs<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Cape Cod<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Breckenridge<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Sayulita<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Puerto Escondido<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Mexico City<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Uluwatu<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Ubud<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Seminyak<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Krabi<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Gili Islands<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Kerala<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Mirissa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
         <li class="marquee-item">Nusa Penida<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Santa Teresa<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Sayulita<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">El Nido<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Bentota<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Mui Ne<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Puerto Escondido<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Malé<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">Miami<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
-        <li class="marquee-item">The Cotswolds<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Byron Bay<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
+        <li class="marquee-item">Zanzibar<svg class="symbol" aria-hidden="true"><use href="#vf-symbol"/></svg></li>
       </ul>
     </div>
   </div>
@@ -390,7 +392,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
       <div class="hiw-step">
         <p class="mono text-teal">Step 02</p>
         <h3>We build the film</h3>
-        <p>Each photo becomes a slow, steady camera move. Thirteen shots, cut to music, graded as one piece, with an opening title and a closing card.</p>
+        <p>Each photo becomes a slow, steady camera move. Ten to ten to thirteen shots, cut to music, graded as one piece, with an opening title and a closing card.</p>
       </div>
       <div class="hiw-scene">
         <div class="hiw-visual">
@@ -406,7 +408,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
                 <img src="media/films/aurora-still-2.jpg" width="960" height="540" alt="" loading="lazy" decoding="async">
                 <i class="strip-head"></i>
               </div>
-              <div class="strip-meta mono"><span>13 shots · 0:30</span><span>Graded as one piece</span></div>
+              <div class="strip-meta mono"><span>10–13 shots · ~0:30</span><span>Graded as one piece</span></div>
             </div>
           </div>
         </div>
@@ -443,9 +445,9 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
     <div data-reveal-kids data-stagger>
       <p class="eyebrow">For property managers</p>
       <div class="big-num"><span data-count="187" data-duration="2200">187</span><small>properties · one look · delivered in batches on an agreed schedule</small></div>
-      <h2 class="h2" data-words>Nobody sends a film crew to 187 villas.</h2>
+      <h2 class="h2" data-words>Nobody sends a film crew to 187 vacation rentals.</h2>
       <p class="lead">We don't have to. We make all 187 from the photos you already hold — the same look across the whole portfolio, delivered in batches. We make the first one for €150, and you pay for it only after you approve it. Then we run the rest.</p>
-      <div class="btn-row"><a class="btn btn-ghost" href="contact.html" data-mag>Ask for a per-property rate <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="btn-row"><a class="btn btn-primary" href="first-film.html" data-mag>How the first film works <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="contact.html" data-mag>Ask for a per-property rate <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
     </div>
     <div>
       <div class="tiles" data-reveal="fade" aria-hidden="true"></div>
@@ -485,13 +487,13 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
         </div>
         <div class="card calc-col calc-col--us">
           <h3>Veranda Films <span class="mono">€150 per film</span></h3>
-          <div class="calc-row"><span class="mono">Cost</span><span class="calc-v" data-calc="us-cost">€9,960</span></div>
-          <div class="calc-row"><span class="mono">Working days</span><span class="calc-v" data-calc="us-days">15 days</span></div>
+          <div class="calc-row"><span class="mono">Cost</span><span class="calc-v" data-calc="us-cost">€6,000</span></div>
+          <div class="calc-row"><span class="mono">Your time</span><span class="calc-v" data-calc="us-days">about 1 hour</span></div>
           <div class="calc-row"><span class="mono">Site visits</span><span class="calc-v" data-calc="us-visits">0 visits</span></div>
         </div>
       </div>
     </div>
-    <p class="fine calc-note">Assumption for the film-crew column: about €800 per property including travel, and about one property per day. Real crew quotes vary by market and season. Veranda Films column: €150 per film (portfolio rates on request are lower); larger orders are delivered in batches on a schedule we agree upfront, the working days shown are an estimate. Both columns exclude the cost of your own time.</p>
+    <p class="fine calc-note">Assumption for the film-crew column: about €800 per property including travel, and about one property per day. Real crew quotes vary by market and season. Veranda Films column: €150 per film; portfolio rates are quoted per portfolio in writing. Larger orders are delivered in batches on a schedule we agree upfront. Your time: sending the link or photos and approving the film.</p>
   </div>
 </section>
 
@@ -504,7 +506,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
     <p class="eyebrow eyebrow--plain eyebrow--center mb-2" data-reveal="fade">What every film includes</p>
     <div class="counters" data-reveal-kids data-stagger>
       <div class="counter"><div class="counter-num" data-count="30">30</div><div class="counter-label">seconds</div></div>
-      <div class="counter"><div class="counter-num" data-count="13">13</div><div class="counter-label">shots</div></div>
+      <div class="counter"><div class="counter-num" data-count="13">13</div><div class="counter-label">shots at most (10–13)</div></div>
       <div class="counter"><div class="counter-num" data-count="3">3</div><div class="counter-label">formats</div></div>
       <div class="counter"><div class="counter-num" data-count="2">2</div><div class="counter-label">rounds of changes</div></div>
       <div class="counter"><div class="counter-num" data-count="0">0</div><div class="counter-label">site visits</div></div>
@@ -592,9 +594,10 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>One 30-second film in 16:9, 9:16 and 4:5</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Built from your existing photos</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Opening title and closing card</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Music, color grade, thirteen shots</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Music, color grade, ten to thirteen shots</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Two rounds of changes</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Delivered in about a week</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>You see a watermarked preview first; clean files after approval</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>First film paid after your approval, further films up front</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Yours to use everywhere, with no time limit</li>
         </ul>
@@ -604,7 +607,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
       <div class="card card--pad-lg price-card price-card--portfolio" id="price-portfolio" role="tabpanel" aria-labelledby="tab-portfolio" data-toggle-panel="1" data-toggle-for="pricing">
         <p class="price-why mono">Portfolio</p>
         <h3 class="h3">A per-property rate that drops with volume.</h3>
-        <p class="muted">Same look across every listing, delivered in batches. Tell us how many properties you manage and we send numbers the same day. Your first film is €150, paid only after you approve it, before you commit to the rest.</p>
+        <p class="muted">Same look across every property, delivered in batches. Tell us how many properties you manage and we send numbers the same day. Your first film is €150, paid only after you approve it, before you commit to the rest.</p>
         <ul class="price-list">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>One look across the whole portfolio</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>First film €150, paid after your approval, before the batch runs</li>
@@ -645,6 +648,10 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
       <div class="acc-item">
         <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b5" aria-expanded="false" aria-controls="faq-p5">Who owns the film?<span class="acc-icon" aria-hidden="true"></span></button></h3>
         <div class="acc-panel" id="faq-p5" role="region" aria-labelledby="faq-b5"><div><p class="acc-body">It is yours to use everywhere, with no time limit — your website, your listings, your ads, your social media. Finished films also appear in our portfolio as references.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b7" aria-expanded="false" aria-controls="faq-p7">Your examples are all in Bali. Does this work for a cabin in Tennessee?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-p7" role="region" aria-labelledby="faq-b7"><div><p class="acc-body">Yes. The method only needs your photos; the location does not matter. Bali is where we started, so that is where the first permissions came from. Your first film costs nothing until you approve it, which is the easiest way to see it on your own property.</p></div></div>
       </div>
       <div class="acc-item">
         <h3 class="acc-h"><button class="acc-btn" type="button" id="faq-b6" aria-expanded="false" aria-controls="faq-p6">How long does it take?<span class="acc-icon" aria-hidden="true"></span></button></h3>

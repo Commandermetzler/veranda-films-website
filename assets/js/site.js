@@ -258,6 +258,7 @@
       });
     }, { threshold: .12, rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (e) { io.observe(e); });
+    setTimeout(function () { els.forEach(function (e) { if (!e.classList.contains('in')) e.classList.add('in'); }); }, 1500); /* fallback: never leave a screen empty */
   }
 
   /* ---------- Counters ([data-count="187"] [data-decimals] [data-prefix] [data-suffix]) ---------- */

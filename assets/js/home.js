@@ -103,7 +103,7 @@
         if (hint) hint.classList.add('is-gone');
       };
       if (NOANIM) { showEnd(); return; }
-      var t = 0, step = 2500;
+      var t = 0, step = 1500;
       caps.forEach(function (c, i) {
         if (i === 0) { c.classList.add('is-in'); } /* first caption paints immediately (no LCP render delay) */
         else setTimeout(function () { if (!shown) c.classList.add('is-in'); }, t + i * step);
@@ -189,7 +189,7 @@
     }
 
     /* captions / headline / HUD as a function of progress p ∈ [0,1] */
-    var capRanges = [[.04, .30], [.34, .55], [.59, .80]], END_AT = .84;
+    var capRanges = [[0, .28], [.32, .52], [.56, .76]], END_AT = .60;
     function states(p) {
       caps.forEach(function (c, i) {
         var r = capRanges[i];
@@ -360,17 +360,17 @@
     function bar(el, w) { if (el) el.style.setProperty('--w', clamp(w, .02, 1).toFixed(3)); }
     function update() {
       var n = parseInt(range.value, 10) || 1;
-      var crewCost = n * 800, crewDays = n, usCost = n * 150, usDays = Math.ceil(n / 15) * 5;
+      var crewCost = n * 800, crewDays = n, usCost = n * 150, usDays = 0;
       out.n.forEach(function (el) { el.textContent = n; });
       txt(out.crewCost, eur(crewCost)); txt(out.crewDays, crewDays + (crewDays === 1 ? ' day' : ' days')); txt(out.crewVisits, n + (n === 1 ? ' visit' : ' visits'));
-      txt(out.usCost, eur(usCost)); txt(out.usDays, usDays + ' days'); txt(out.usVisits, '0 visits');
-      var maxCost = Math.max(crewCost, usCost), maxDays = Math.max(crewDays, usDays);
+      txt(out.usCost, eur(usCost)); txt(out.usDays, 'about 1 hour'); txt(out.usVisits, '0 visits');
+      var maxCost = Math.max(crewCost, usCost), maxDays = Math.max(crewDays, 1);
       bar(out.bCostCrew, crewCost / maxCost); bar(out.bCostUs, usCost / maxCost);
-      bar(out.bTimeCrew, crewDays / maxDays); bar(out.bTimeUs, usDays / maxDays);
+      bar(out.bTimeCrew, crewDays / maxDays); bar(out.bTimeUs, .02);
       var save = crewCost - usCost, days = crewDays - usDays;
       if (out.result) {
         out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + eur(save) + '</b>' +
-          (days > 0 ? ' and roughly <b>' + days + ' working days</b>.' : ', and the film arrives in <b>about a week</b>.');
+          (days > 0 ? ' and roughly <b>' + days + ' days of site visits</b>.' : ', and the film arrives in <b>about a week</b>.');
       }
       range.style.setProperty('--p', ((n - 1) / 199 * 100).toFixed(2) + '%');
       range.setAttribute('aria-valuenow', n);
