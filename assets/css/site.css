@@ -1377,4 +1377,4 @@ html.noanim .hud-tag{opacity:1;transform:none}
   padding:.5rem .9rem;border:1px solid rgba(244,239,230,.14);border-radius:999px;background:rgba(6,9,18,.42);backdrop-filter:blur(6px);
   transition:opacity .6s var(--ease-out)}
 .hero.is-end .hero-pin{opacity:0}
-@media (max-width:640px){.hero-pin{font-size:.66rem;border-radius:16px;top:calc(var(--nav-h, 64px) + 10px)}}
+@media (max-width:640px){.hero-pin{font-size:.66rem;border-radius:16px;top:calc(var(--nav-h, 64px) + 8px);max-width:88vw}.hero-captions{padding-top:30vh}}

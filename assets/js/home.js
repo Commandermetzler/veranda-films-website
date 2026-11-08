@@ -363,14 +363,14 @@
       var crewCost = n * 800, crewDays = n, usCost = n * 150, usDays = 0;
       out.n.forEach(function (el) { el.textContent = n; });
       txt(out.crewCost, eur(crewCost)); txt(out.crewDays, crewDays + (crewDays === 1 ? ' day' : ' days')); txt(out.crewVisits, n + (n === 1 ? ' visit' : ' visits'));
-      txt(out.usCost, eur(usCost)); txt(out.usDays, 'about 1 hour'); txt(out.usVisits, '0 visits');
+      txt(out.usCost, eur(usCost)); txt(out.usDays, 'a few minutes'); txt(out.usVisits, '0 visits');
       var maxCost = Math.max(crewCost, usCost), maxDays = Math.max(crewDays, 1);
       bar(out.bCostCrew, crewCost / maxCost); bar(out.bCostUs, usCost / maxCost);
       bar(out.bTimeCrew, crewDays / maxDays); bar(out.bTimeUs, .02);
       var save = crewCost - usCost, days = crewDays - usDays;
       if (out.result) {
-        out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + eur(save) + '</b>' +
-          (days > 0 ? ' and roughly <b>' + days + ' days of site visits</b>.' : ', and the film arrives in <b>about a week</b>.');
+        out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + eur(save) + '</b> and <b>' +
+          n + (n === 1 ? ' site visit' : ' site visits') + '</b>. The first film arrives in <b>about a week</b>.';
       }
       range.style.setProperty('--p', ((n - 1) / 199 * 100).toFixed(2) + '%');
       range.setAttribute('aria-valuenow', n);
