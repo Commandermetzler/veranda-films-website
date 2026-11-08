@@ -28,7 +28,7 @@
     if (html.classList.contains('vf-seen') || STATIC || param('scrub') !== null || param('only') !== null) { pre.remove(); return; }
     try { sessionStorage.setItem('vf-seen', '1'); } catch (e) {}
     html.classList.add('pre-lock');
-    var num = $('.pre-num', pre), t0 = performance.now(), D = 980, finished = false;
+    var num = $('.pre-num', pre), t0 = performance.now(), D = 600, finished = false;
     function finish(instant) {
       if (finished) return; finished = true;
       if (num) num.textContent = '100';
@@ -38,7 +38,7 @@
     /* hidden/background tab: rAF is suspended, so skip the animation instead of locking the page */
     if (document.visibilityState === 'hidden') { finish(true); return; }
     /* safety net: the <= 1.6 s promise holds even if the rAF loop never completes */
-    setTimeout(function () { finish(false); }, 1800);
+    setTimeout(function () { finish(false); }, 1100);
     raf(function tick(now) {
       if (finished) return;
       var p = clamp((now - t0) / D, 0, 1), e = 1 - Math.pow(1 - p, 3);

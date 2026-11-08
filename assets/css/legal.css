@@ -14,3 +14,20 @@
 /* 08.11.2026: text-only page heads never depend on the reveal animation — a blank first screen costs trust */
 html.js .legal-head [data-reveal-kids] > *{opacity:1;transform:none;transition:none}
 .legal-head .w > span{transform:none;transition:none}
+
+/* 08.11.2026: Preistabelle + Verkaufsseite first-film */
+.price-table th,.price-table td{padding:.75rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+.price-table th{font:500 var(--fs-mono,.75rem) var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--cream-60)}
+.price-table td:nth-child(4){color:var(--cream);white-space:nowrap}
+@media (max-width:640px){
+  .price-table thead{display:none}
+  .price-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.1rem .8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+  .price-table td{display:block;padding:0;border:0}
+  .price-table td:nth-child(2){font-size:var(--fs-sm,.85rem)}
+  .price-table td:nth-child(3){grid-column:2;grid-row:1;text-align:right}
+  .price-table td:nth-child(4){grid-column:2;grid-row:2;text-align:right}
+}
+.legal-text ol{margin:0 0 1rem;padding-left:1.4rem;display:grid;gap:.7rem}
+.legal-text ol li::marker{color:var(--gold);font-family:var(--font-mono)}
+.legal-text .btn-row{margin:1.2rem 0 1.6rem}
+#first-film .legal-kicker{text-transform:none;letter-spacing:.08em}
