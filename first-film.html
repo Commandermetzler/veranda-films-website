@@ -41,9 +41,14 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
 <link rel="stylesheet" href="/assets/css/legal.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://verandafilms.com/#org","name":"Veranda Films","url":"https://verandafilms.com/","email":"hello@verandafilms.com","logo":"https://verandafilms.com/assets/img/icon-512.png","image":"https://verandafilms.com/assets/img/og.jpg","description":"Veranda Films is a Bali-based studio that turns the photos a villa or hotel already has into a cinematic 30-second film, delivered in three formats in about a week, with no crew, no shoot and no site visit. The studio also builds direct-booking websites, presentations, listing copy and translation, social content kits, photo polish, narrated films and guest guidebooks — all produced remotely.","foundingDate":"2026","address":{"@type":"PostalAddress","addressLocality":"Canggu","addressRegion":"Bali","addressCountry":"ID"},"areaServed":["United States","Mexico","Australia","New Zealand","United Arab Emirates","United Kingdom","Brazil","Indonesia","Thailand"],"sameAs":["https://www.instagram.com/veranda.films/","https://www.youtube.com/@verandafilms"]},
+{"@type":"Organization","@id":"https://verandafilms.com/#org","name":"Veranda Films","url":"https://verandafilms.com/","email":"hello@verandafilms.com","logo":"https://verandafilms.com/assets/img/icon-512.png","image":"https://verandafilms.com/assets/img/og.jpg","description":"Veranda Films is a Bali-based studio that turns the photos a villa or hotel already has into a cinematic 30-second film, delivered in three formats in about a week, with no crew, no shoot and no site visit. The studio also builds direct-booking websites, presentations, listing copy and translation, social content kits, photo polish, narrated films and guest guidebooks — all produced remotely.","foundingDate":"2026","legalName":"PT Island Trading Solutions","telephone":"+62 851 9075 1710","address":{"@type":"PostalAddress","streetAddress":"Jl. Raya Kerobokan No. 98","addressLocality":"Kerobokan Kelod, Kuta Utara, Badung","addressRegion":"Bali","postalCode":"80361","addressCountry":"ID"},"areaServed":["United States","Mexico","Australia","New Zealand","United Arab Emirates","United Kingdom","Brazil","Indonesia","Thailand"],"sameAs":["https://www.instagram.com/veranda.films/","https://www.youtube.com/@verandafilms"]},
 {"@type":"WebSite","@id":"https://verandafilms.com/#website","url":"https://verandafilms.com/","name":"Veranda Films","publisher":{"@id":"https://verandafilms.com/#org"}},
-{"@type":"WebPage","@id":"https://verandafilms.com/first-film.html","url":"https://verandafilms.com/first-film.html","name":"Your first film, risk-free — Veranda Films","isPartOf":{"@id":"https://verandafilms.com/#website"},"about":{"@id":"https://verandafilms.com/#org"}}
+{"@type":"WebPage","@id":"https://verandafilms.com/first-film.html","url":"https://verandafilms.com/first-film.html","name":"Your first film, risk-free — Veranda Films","isPartOf":{"@id":"https://verandafilms.com/#website"},"about":{"@id":"https://verandafilms.com/#org"}},
+{"@type":"FAQPage","@id":"https://verandafilms.com/first-film.html#questions","mainEntity":[{"@type":"Question","name":"Do I need to send anything?","acceptedAnswer":{"@type":"Answer","text":"Only the link to one property on your own website. If your website has no gallery or only small photos, send 12 or more original photos instead (2,500 px wide or larger works best). Nobody needs to visit the property."}},
+{"@type":"Question","name":"Who owns the photos?","acceptedAnswer":{"@type":"Answer","text":"You do, or your photographer. Sending them to us changes nothing about that; we use them only to make your film. Please send only photos you own or are allowed to use."}},
+{"@type":"Question","name":"What if I don't like the film?","acceptedAnswer":{"@type":"Answer","text":"Two rounds of changes are included. If you still don't want to use it, you pay nothing and the watermarked preview is not used. If your photos cannot carry a film, we tell you before we start."}},
+{"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"About a week from the day we have your link or photos. Larger portfolios are delivered in batches on a schedule we agree upfront."}},
+{"@type":"Question","name":"What does it cost after the first film?","acceptedAnswer":{"@type":"Answer","text":"€150 per film, or €399 for three. For more properties we quote one per-property rate in writing. Every film after the first one is paid up front."}}]}
 ]}
 </script>
 </head>
@@ -132,8 +137,12 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
     <h1 class="display" data-words>Your first film, <em class="serif">risk-free.</em></h1>
     <p class="lead">One property, one 30-second film, made from the photos you already have. You see it first. You pay €150 only if you want to use it.</p>
     <nav class="legal-toc" aria-label="On this page">
-      <a href="#steps">The four steps</a><a href="#honest">What it is</a><a href="#start">Start</a>
+      <a href="#steps">The four steps</a><a href="#honest">What it is</a><a href="#questions">Questions</a><a href="#start">Start</a>
     </nav>
+    <div class="btn-row ff-cta">
+      <a class="btn btn-primary" href="mailto:hello@verandafilms.com?subject=First%20film%20%E2%80%94%20link%20to%20one%20property&amp;body=Yes%20to%20a%20first%20film.%0A%0ALink%20to%20one%20property%20on%20our%20website%3A%20%0ANumber%20of%20properties%20we%20manage%3A%20%0A">Send one link by email</a>
+      <a class="btn btn-ghost" href="https://wa.me/6285190751710?text=Hi%20Veranda%20Films%20%E2%80%94%20yes%20to%20a%20first%20film.%20Link%20to%20one%20property%20on%20our%20website%3A%20%5B%20%5D%20%20Number%20of%20properties%20we%20manage%3A%20%5B%20%5D" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp us</a>
+    </div>
   </div>
 </section>
 
@@ -152,10 +161,23 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
     <p>The camera movement is made with AI from your own photos. We check every clip against the original photo and cut anything that isn't really there. Nothing is filmed on site, no drone, no crew. The film is yours to use everywhere, with no time limit — your website, your ads, your social channels, your emails to past guests and your owner pitches.</p>
     <p>Our example films so far are from Bali — that is where we started and where the first permissions came from. The method only needs your photos; the location does not matter. Watch the <a href="films.html">pilot films</a>, then see it on your own property.</p>
 
+    <h2 id="questions">Quick answers</h2>
+    <h3>Do I need to send anything?</h3>
+    <p>Only the link to one property on your own website. If your website has no gallery or only small photos, send 12 or more original photos instead (2,500 px wide or larger works best). Nobody needs to visit the property.</p>
+    <h3>Who owns the photos?</h3>
+    <p>You do, or your photographer. Sending them to us changes nothing about that; we use them only to make your film. Please send only photos you own or are allowed to use.</p>
+    <h3>What if I don&rsquo;t like the film?</h3>
+    <p>Two rounds of changes are included. If you still don&rsquo;t want to use it, you pay nothing and the watermarked preview is not used. If your photos cannot carry a film, we tell you before we start.</p>
+    <h3>How long does it take?</h3>
+    <p>About a week from the day we have your link or photos. Larger portfolios are delivered in batches on a schedule we agree upfront.</p>
+    <h3>What does it cost after the first film?</h3>
+    <p>€150 per film, or €399 for three. For more properties we quote one per-property rate in writing. Every film after the first one is paid up front.</p>
+
     <h2 id="start">Start</h2>
     <p>Send the link to one property. We answer within one business day — your afternoon is our night, so expect the reply by your next morning.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:hello@verandafilms.com?subject=First%20film%20%E2%80%94%20link%20to%20one%20property">Send one link by email</a>
+      <a class="btn btn-primary" href="mailto:hello@verandafilms.com?subject=First%20film%20%E2%80%94%20link%20to%20one%20property&amp;body=Yes%20to%20a%20first%20film.%0A%0ALink%20to%20one%20property%20on%20our%20website%3A%20%0ANumber%20of%20properties%20we%20manage%3A%20%0A">Send one link by email</a>
+      <a class="btn btn-ghost" href="https://wa.me/6285190751710?text=Hi%20Veranda%20Films%20%E2%80%94%20yes%20to%20a%20first%20film.%20Link%20to%20one%20property%20on%20our%20website%3A%20%5B%20%5D%20%20Number%20of%20properties%20we%20manage%3A%20%5B%20%5D" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp us</a>
       <a class="btn btn-ghost" href="contact.html">Use the form</a>
     </div>
     <p class="fine">Prices in euros; the first film is paid after approval, every film after that is paid up front. Full price list and seller details: <a href="pricing.html">Prices &amp; ordering</a>. Veranda Films is a brand of PT Island Trading Solutions, Bali, Indonesia.</p>
@@ -200,7 +222,7 @@ if(location.search.indexOf('noanim')>-1)document.documentElement.classList.add('
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="mono">© 2026 Veranda Films · a brand of PT Island Trading Solutions, Bali, Indonesia · <a href="pricing.html">Prices &amp; ordering</a> · <a href="legal.html">Privacy &amp; terms</a></span>
+      <span class="mono">© 2026 Veranda Films · a brand of PT Island Trading Solutions · Jl. Raya Kerobokan No. 98, Kerobokan Kelod, Kuta Utara, Badung, Bali 80361, Indonesia · <a href="pricing.html">Prices &amp; ordering</a> · <a href="legal.html">Privacy &amp; terms</a></span>
       <span class="mono">Canggu · UTC+8 · hello@verandafilms.com · <a href="tel:+6285190751710">+62 851 9075 1710</a></span>
     </div>
   </div>

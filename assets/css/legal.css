@@ -31,3 +31,30 @@ html.js .legal-head [data-reveal-kids] > *{opacity:1;transform:none;transition:n
 .legal-text ol li::marker{color:var(--gold);font-family:var(--font-mono)}
 .legal-text .btn-row{margin:1.2rem 0 1.6rem}
 #first-film .legal-kicker{text-transform:none;letter-spacing:.08em}
+
+/* 09.11.2026: first-film — call to action directly under the intro, visible on a phone without scrolling */
+.ff-cta{margin-top:.6rem}
+/* buttons inside text pages keep their own colours (the gold text-link colour made the primary button gold on teal — unreadable) */
+.legal-text a.btn-primary{color:var(--navy)}
+.legal-text a.btn-ghost{color:var(--cream)}
+@media (pointer:coarse){
+  .legal-toc a{display:inline-block;padding:.4rem 0}
+  .legal-text p a,.legal-text li a{padding:.2rem 0}
+}
+
+/* 09.11.2026: print — legal, prices and first-film pages print as plain black text on white, without menu, effects or footer art */
+@media print{
+  html,body{background:#fff !important;color:#000 !important}
+  .nav,.menu,.beams,.grain,.progress,.wipe,.skip,.lightbox,.cursor,.toast,.footer .orbit,.footer-grid,.legal-toc,.btn-row{display:none !important}
+  .page-head,.legal-body,.footer{padding:0 !important;background:none !important;border:0 !important}
+  .legal-head .container-narrow{gap:.4rem}
+  .legal-text{max-width:none;line-height:1.5}
+  .legal-text p,.legal-text li,.legal-text h2,.legal-text h3,.lead,.legal-kicker,.display,.fine,.muted,.footer-bottom,.price-table th,.price-table td{color:#000 !important}
+  .display,.display *{font-size:24pt !important;-webkit-text-fill-color:#000 !important;background:none !important}
+  .legal-text a,.lead a{color:#000 !important;text-decoration:underline}
+  .legal-text h2{break-after:avoid;margin-top:1.4rem}
+  .legal-text li,.price-table tr{break-inside:avoid}
+  .price-table th,.price-table td{border-bottom:1px solid #999 !important}
+  .footer-bottom{border-top:1px solid #999 !important;margin-top:1.5rem;padding-top:.6rem}
+  .footer-bottom a{color:#000 !important}
+}

@@ -93,7 +93,7 @@
           'Location: ' + ph(r.v.location, 'town, island or country') + '\n' +
           'Number of properties: ' + ph(r.v.count, '1') + '\n' +
           'I need: ' + ph(r.list.join(' / ').toLowerCase(), 'film / website / presentation / other') + '\n\n' +
-          ph(r.v.message, 'A link to your listing is the fastest way to start.');
+          ph(r.v.message, 'A link to the property on your own website is the fastest way to start.');
       }
       if (needsField) needsField.value = r.list.join(', ');
       if (msgLine && r.valid) msgLine.textContent = '';
