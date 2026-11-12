@@ -36,7 +36,7 @@
     this.root.setAttribute('aria-hidden', 'true');
     this.root.innerHTML =
       '<div class="mini-nav piece" data-piece="nav">' +
-        '<span class="mini-brand" data-m="brand">Your villa</span>' +
+        '<span class="mini-brand" data-m="brand">Your place</span>' +
         '<span class="mini-links"><span>Film</span><span>Rooms</span><span>Location</span></span>' +
         '<span class="mini-btn mini-btn--sm">Book</span>' +
       '</div>' +
@@ -46,7 +46,7 @@
         '<div class="mini-hero-shade"></div>' +
         '<span class="mini-film-tag piece" data-piece="film"><i></i>Film · 0:30</span>' +
         '<div class="mini-hero-copy">' +
-          '<h2 class="mini-h1 piece" data-piece="headline"><span class="mini-line" data-m="name">Your villa</span> — <em class="mini-line" data-m="line">the ocean, from above</em></h2>' +
+          '<h2 class="mini-h1 piece" data-piece="headline"><span class="mini-line" data-m="name">Your place</span> — <em class="mini-line" data-m="line">the ocean, from above</em></h2>' +
           '<p class="mini-sub piece" data-piece="sub" data-m="loc">Your location</p>' +
           '<span class="mini-btn piece" data-piece="book">Book direct</span>' +
         '</div>' +
@@ -64,7 +64,7 @@
             '<circle class="ring" cx="60" cy="33" r="4"/><circle class="pin" cx="60" cy="33" r="2.2"/>' +
           '</svg></div></div>' +
       '</div>' +
-      '<div class="mini-foot piece" data-piece="foot"><span class="mini-foot-links"><span>Book direct</span><span>WhatsApp</span></span><b data-m="brand2">Your villa</b></div>';
+      '<div class="mini-foot piece" data-piece="foot"><span class="mini-foot-links"><span>Book direct</span><span>WhatsApp</span></span><b data-m="brand2">Your place</b></div>';
     screen.appendChild(this.root);
     this.imgs = $$('.mini-hero-img', this.root);
     this.thumb = $('.mini-film-thumb', this.root);
@@ -77,7 +77,7 @@
   };
   MiniSite.prototype.update = function (s, opts) {
     opts = opts || {};
-    var name = s.name.trim() || 'Your villa';
+    var name = s.name.trim() || 'Your place';
     var loc = s.loc.trim() || 'Your location';
     this.setText('brand', name); this.setText('brand2', name);
     this.setText('loc', loc); this.setText('loc2', loc);
@@ -196,16 +196,16 @@
       sites.forEach(function (m) { m.reset(); });
       render();
       if (STATIC) {
-        nameIn.value = 'Villa Saya'; locIn.value = 'Uluwatu, Bali'; render();
+        nameIn.value = 'Seabreeze Cottage'; locIn.value = 'Kauai, Hawaii'; render();
         sites.forEach(function (m) { m.showAll(); });
         setStatus('Now change anything.', true); demoRunning = false; sec.classList.remove('is-demo');
         return;
       }
       setStatus('Writing the headline');
       showAll('nav');
-      wait(350).then(function () { return typeInto(nameIn, 'Villa Saya', token); })
+      wait(350).then(function () { return typeInto(nameIn, 'Seabreeze Cottage', token); })
       .then(function () { if (token !== demoToken) return; showAll('headline'); return wait(500); })
-      .then(function () { if (token !== demoToken) return; return typeInto(locIn, 'Uluwatu, Bali', token); })
+      .then(function () { if (token !== demoToken) return; return typeInto(locIn, 'Kauai, Hawaii', token); })
       .then(function () { if (token !== demoToken) return; showAll('sub'); return wait(350); })
       .then(function () { if (token !== demoToken) return; choose(vibeIns, 'cliff', token); setStatus('Placing the film'); showAll('film'); return wait(700); })
       .then(function () { if (token !== demoToken) return; showAll('book'); showAll('s1'); return wait(550); })

@@ -205,9 +205,9 @@
 @media (max-width:639px){.box-card--dial{grid-column:auto}}
 /* fifth small card becomes a full-width closing strip under the 2×2 (no lonely card + hole) */
 @media (min-width:640px){
-  .box-grid > .box-card:last-child{grid-column:1 / -1;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:1.4rem;padding:1.3rem 1.7rem;min-height:0}
-  .box-grid > .box-card:last-child .h3{white-space:nowrap}
-  .box-grid > .box-card:last-child .card-icon{margin:0}
+  .box-grid:not(.box-grid--even) > .box-card:last-child{grid-column:1 / -1;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:1.4rem;padding:1.3rem 1.7rem;min-height:0}
+  .box-grid:not(.box-grid--even) > .box-card:last-child .h3{white-space:nowrap}
+  .box-grid:not(.box-grid--even) > .box-card:last-child .card-icon{margin:0}
 }
 .box-card .h3{font-size:clamp(1.15rem, 1.6vw, 1.4rem)}
 .box-card p{margin:0}
@@ -228,3 +228,8 @@ html.noanim .dial .glow{stroke-dashoffset:6.8}
 
 .box-price{display:grid;grid-template-columns:1fr auto;gap:1.5rem 3rem;align-items:center;margin-top:clamp(2rem, 4vw, 3.5rem);padding-top:clamp(1.5rem, 3vw, 2.5rem);border-top:1px solid var(--line)}
 @media (max-width:859px){.box-price{grid-template-columns:1fr}}
+
+/* Websites-Bereich 13.11.2026: gleichmäßige Raster + zwei Preiskarten nebeneinander */
+.box-grid--even > .box-card .mono{margin:0;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.price-cards--duo{display:grid;gap:1.25rem}
+@media (min-width:900px){.price-cards--duo{grid-template-columns:repeat(2,minmax(0,1fr))}}

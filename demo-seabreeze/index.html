@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seabreeze Cottage · Ocean coast · demo property</title>
+<meta name="description" content="Demo of a direct-booking website by Veranda Films: film on top, rooms, gallery, location and a book-direct button.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Seabreeze Cottage · Ocean coast · demo property">
+<meta property="og:description" content="Demo of a direct-booking website by Veranda Films: film on top, rooms, gallery, location and a book-direct button.">
+<meta property="og:image" content="media/loop-pool.jpg">
+<meta name="theme-color" content="#0f1a24">
+<style>
+  :root { --ink:#0f1a24; --akzent:#d9643a; --papier:#f7f4ee; --text:#1d2230; --grau:#5d6577; --linie:rgba(29,34,48,.12); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --papier:#0f131c; --text:#eef0f4; --grau:#a7aebd; --linie:rgba(255,255,255,.12); } }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--papier); color:var(--text); font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; -webkit-font-smoothing:antialiased; }
+  img, video { display:block; max-width:100%; }
+  a { color:inherit; }
+  .wrap { width:min(1120px, 100% - 32px); margin-inline:auto; }
+  .kopf { position:fixed; inset:0 0 auto 0; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:14px 16px; color:#fff; background:linear-gradient(180deg, rgba(0,0,0,.55), transparent); }
+  .kopf b { font-family:Georgia,"Times New Roman",serif; font-weight:600; font-size:20px; letter-spacing:.01em; }
+  .kopf nav { display:flex; gap:18px; font-size:15px; }
+  .kopf nav a { text-decoration:none; opacity:.9; }
+  .kopf nav a.knopf { background:var(--akzent); color:#fff; padding:8px 14px; border-radius:999px; opacity:1; font-weight:600; }
+  @media (max-width:640px) { .kopf nav a:not(.knopf) { display:none; } }
+  .held { position:relative; min-height:100svh; display:grid; align-items:end; color:#fff; overflow:hidden; background:var(--ink); }
+  .held video, .held > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .held::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.15) 30%, rgba(0,0,0,.7)); }
+  .held .wrap { position:relative; z-index:1; padding:0 0 64px; }
+  .held p.ort { letter-spacing:.18em; text-transform:uppercase; font-size:13px; opacity:.9; }
+  .held h1 { font-family:Georgia,"Times New Roman",serif; font-weight:500; font-size:clamp(40px, 8vw, 84px); line-height:1.02; margin:10px 0 14px; max-width:14ch; }
+  .held .zeile { font-size:clamp(17px, 2.2vw, 21px); max-width:40ch; opacity:.95; }
+  .knoepfe { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 22px; border-radius:999px; font-weight:700; text-decoration:none; font-size:16px; }
+  .btn.voll { background:var(--akzent); color:#fff; }
+  .btn.rand { border:1.5px solid currentColor; }
+  section { padding:72px 0; border-top:1px solid var(--linie); scroll-margin-top:64px; }
+  h2 { font-family:Georgia,"Times New Roman",serif; font-weight:500; font-size:clamp(30px, 4.4vw, 46px); line-height:1.1; margin-bottom:16px; }
+  .lead { color:var(--grau); font-size:19px; max-width:62ch; }
+  .drei { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:28px; }
+  .drei div { border:1px solid var(--linie); border-radius:16px; padding:20px; }
+  .drei b { display:block; font-size:18px; margin-bottom:6px; }
+  .drei p { color:var(--grau); font-size:15px; }
+  .zimmer { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:18px; margin-top:28px; }
+  .zimmer figure { border-radius:16px; overflow:hidden; border:1px solid var(--linie); }
+  .zimmer img { aspect-ratio:4/3; object-fit:cover; width:100%; }
+  .zimmer figcaption { padding:14px 16px; }
+  .zimmer figcaption b { display:block; }
+  .zimmer figcaption span { color:var(--grau); font-size:14px; }
+  .galerie { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; margin-top:28px; }
+  .galerie img { aspect-ratio:1; object-fit:cover; width:100%; border-radius:12px; }
+  .galerie img:first-child { grid-column:span 2; grid-row:span 2; aspect-ratio:auto; height:100%; }
+  .lage { display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; }
+  .lage ul { list-style:none; margin-top:16px; display:grid; gap:8px; color:var(--grau); }
+  .lage ul li::before { content:"— "; color:var(--akzent); }
+  .karte { border-radius:16px; overflow:hidden; border:1px solid var(--linie); aspect-ratio:4/3; display:grid; place-items:center; background:var(--ink); color:#fff; text-decoration:none; font-weight:700; }
+  .buchen { background:var(--ink); color:#fff; text-align:center; }
+  .buchen .lead { color:rgba(255,255,255,.8); margin-inline:auto; }
+  .buchen .knoepfe { justify-content:center; }
+  footer { padding:36px 0 48px; color:var(--grau); font-size:14px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; }
+  .demo-band { position:fixed; left:0; right:0; bottom:0; z-index:20; background:#111; color:#fff; font-size:13px; text-align:center; padding:8px 12px; }
+  .demo-band a { color:#5BF0E1; }
+  @media (max-width:760px) {
+    .drei, .lage { grid-template-columns:1fr; }
+    .galerie { grid-template-columns:repeat(2, 1fr); }
+    section { padding:56px 0; }
+  }
+</style>
+</head>
+<body>
+<header class="kopf">
+  <b>Seabreeze Cottage</b>
+  <nav><a href="#stay">The stay</a><a href="#rooms">Rooms</a><a href="#location">Location</a><a class="knopf" href="#book">Book direct</a></nav>
+</header>
+
+<div class="held">
+  <video autoplay muted loop playsinline preload="metadata" poster="media/loop-pool.jpg"><source src="media/loop-pool.mp4" type="video/mp4"></video>
+  <div class="wrap">
+    <p class="ort">Ocean coast · demo property</p>
+    <h1>Seabreeze Cottage</h1>
+    <p class="zeile">Three bedrooms above the water, a pool you share with no one, and the beach a short walk down the path.</p>
+    <div class="knoepfe">
+      <a class="btn voll" href="#book">Check availability</a>
+      <a class="btn rand" href="#book">Message us</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="stay">
+    <div class="wrap">
+      <h2>Wake up to the sound of the sea</h2>
+      <p class="lead">Seabreeze Cottage sits on a quiet bluff with an uninterrupted view of the ocean. Mornings start with coffee on the terrace, afternoons by the pool, evenings watching the light go down over the water. It sleeps six, is set up for families and long stays, and every booking comes straight to us — no platform in between.</p>
+      <div class="drei"><div><b>Book direct, pay less</b><p>Guests book through our own calendar and save the platform service fee. Questions go straight to us.</p></div><div><b>The ocean, all day</b><p>Sea view from the terrace, the pool and the main suite, with a shaded corner for slow afternoons.</p></div><div><b>Families welcome</b><p>Full kitchen, washer and dryer, cot and high chair on request, free parking for two cars.</p></div></div>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <div class="wrap">
+      <h2>Rooms</h2>
+      <p class="lead">Three bedrooms, two bathrooms, linen and towels included.</p>
+      <div class="zimmer"><figure><img src="media/vibe-cliff.webp" alt="Ocean suite" loading="lazy"><figcaption><b>Ocean suite</b><span>King bed · 2 guests · ensuite · sea view</span></figcaption></figure><figure><img src="media/vibe-jungle.webp" alt="Garden room" loading="lazy"><figcaption><b>Garden room</b><span>Queen bed · 2 guests · garden view</span></figcaption></figure><figure><img src="media/vibe-beach.webp" alt="Pool house" loading="lazy"><figcaption><b>Pool house</b><span>Two singles · 2 guests · private terrace</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2>Gallery</h2>
+      <div class="galerie"><img src="media/vibe-beach.webp" alt="" loading="lazy"><img src="media/vibe-cliff.webp" alt="" loading="lazy"><img src="media/vibe-jungle.webp" alt="" loading="lazy"><img src="media/vibe-city.webp" alt="" loading="lazy"><img src="media/loop-palms.jpg" alt="" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="wrap lage">
+      <div>
+        <h2>Location</h2>
+        <p class="lead">On a quiet road above the bay, close enough to walk to the beach and to drive into town for dinner.</p>
+        <ul><li>Beach: 5 minutes on foot</li><li>Town with shops and restaurants: 10 minutes by car</li><li>Nearest airport: about 40 minutes</li></ul>
+      </div>
+      <a class="karte" href="https://www.google.com/maps" target="_blank" rel="noopener">Open in Google Maps →</a>
+    </div>
+  </section>
+
+  <section class="buchen" id="book">
+    <div class="wrap">
+      <h2>Book directly with us</h2>
+      <p class="lead">Check availability for your dates, or send us a message — we usually reply within a few hours. No platform fees for you or for us.</p>
+      <div class="knoepfe">
+        <a class="btn voll" href="#book">Check availability</a>
+        <a class="btn rand" href="#book">WhatsApp</a>
+        <a class="btn rand" href="mailto:hello@verandafilms.com">Email</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Seabreeze Cottage · Demo site · sample property and images</span>
+  <span>+62 851 9075 1710 · <a href="mailto:hello@verandafilms.com">hello@verandafilms.com</a></span>
+  <span>Website &amp; film: Veranda Films</span>
+</footer>
+<div class="demo-band">Demo site by Veranda Films — sample property and images. <a href="https://verandafilms.com/websites.html">Get one for your place →</a></div>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Commission Closer · Veranda Films</title>
+<meta name="description" content="Commission-only closer role: sell property films and booking websites to US vacation rental managers by phone.">
+<link rel="icon" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --tinte:#07090d; --flaeche:#0e1219; --linie:rgba(255,255,255,.09); --cyan:#3ff2e3; --lila:#a78bfa; --sand:#f5f3ee; --grau:#aab3c2; --gruen:#25d366; --rot:#ff6b6b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--tinte); color:var(--sand); font-family:'Inter',system-ui,sans-serif; line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  a { color:var(--cyan); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .mono { font-family:'Space Grotesk',sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 20px; }
+  .glow { position:fixed; width:70vw; height:70vw; max-width:900px; max-height:900px; border-radius:50%; filter:blur(120px); opacity:.18; pointer-events:none; z-index:0; }
+  .glow.c { background:var(--cyan); left:-30vw; top:-20vw; }
+  .glow.l { background:var(--lila); right:-30vw; bottom:-20vw; }
+  main { position:relative; z-index:1; }
+
+  /* Kopf */
+  .kopf { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
+  .kopf img { height:34px; }
+  .chip { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--tinte); background:var(--cyan); padding:8px 14px; border-radius:999px; }
+
+  /* Hero */
+  .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:30px; align-items:center; padding:30px 0 70px; min-height:70vh; }
+  .ober { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; letter-spacing:.22em; text-transform:uppercase; color:var(--cyan); }
+  h1 { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(52px,9vw,112px); line-height:.92; letter-spacing:-.04em; margin-top:10px; }
+  h1 span { display:block; color:transparent; -webkit-text-stroke:2px var(--sand); }
+  .hero p.lead { margin-top:22px; font-size:19px; color:var(--grau); max-width:520px; }
+  .hero p.lead b { color:var(--sand); }
+  .tags { margin-top:22px; display:flex; flex-wrap:wrap; gap:10px; }
+  .tags span { font-size:14px; font-weight:700; padding:9px 14px; border-radius:999px; border:1.5px solid rgba(245,243,238,.3); background:rgba(7,9,13,.55); }
+  .tags span.hi { border-color:var(--cyan); color:var(--cyan); }
+  .hero .bild { position:relative; aspect-ratio:3/4; border-radius:28px; overflow:hidden; border:1.5px solid var(--linie); box-shadow:0 30px 80px rgba(0,0,0,.6); }
+  .hero .bild img { width:100%; height:100%; object-fit:cover; display:block; }
+  .hero .bild::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(7,9,13,.85)); }
+  .hero .bild figcaption { position:absolute; left:18px; right:18px; bottom:16px; font-size:13px; color:var(--grau); }
+  .runter { margin-top:-30px; padding-bottom:30px; font-size:13px; color:var(--grau); letter-spacing:.1em; text-transform:uppercase; }
+
+  /* Abschnitte */
+  section { padding:70px 0; border-top:1px solid var(--linie); }
+  .nr { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--cyan); }
+  h2 { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(34px,5vw,56px); line-height:1; letter-spacing:-.03em; margin-top:10px; max-width:760px; }
+  h2 em { font-style:normal; color:var(--lila); }
+  .intro { margin-top:18px; font-size:18px; color:var(--grau); max-width:680px; }
+  .intro b, p b { color:var(--sand); }
+  h3 { font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700; letter-spacing:-.01em; }
+  .raster { display:grid; gap:14px; margin-top:30px; }
+  .raster.zwei { grid-template-columns:repeat(2,1fr); }
+  .raster.drei { grid-template-columns:repeat(3,1fr); }
+  .kachel { background:var(--flaeche); border:1.5px solid var(--linie); border-radius:22px; padding:24px; }
+  .kachel.hi { border-color:rgba(63,242,227,.5); background:linear-gradient(135deg, rgba(63,242,227,.08), rgba(167,139,250,.06)); }
+  .kachel.lila { border-color:rgba(167,139,250,.55); background:linear-gradient(135deg, rgba(167,139,250,.16), rgba(63,242,227,.06)); }
+  .kachel small { display:block; font-size:13px; font-weight:600; color:var(--grau); letter-spacing:.04em; text-transform:uppercase; margin-bottom:8px; }
+  .kachel b.zahl { display:block; font-family:'Space Grotesk',sans-serif; font-size:clamp(40px,6vw,64px); line-height:1; font-weight:700; letter-spacing:-.03em; }
+  .kachel b.zahl.cyan { color:var(--cyan); } .kachel b.zahl.lila { color:var(--lila); }
+  .kachel p { margin-top:8px; color:var(--grau); font-size:15px; }
+  .liste { margin-top:22px; display:grid; gap:10px; }
+  .liste div { position:relative; padding:14px 16px 14px 46px; border-radius:16px; background:var(--flaeche); border:1.5px solid var(--linie); font-size:16px; }
+  .liste div::before { content:'✓'; position:absolute; left:16px; top:13px; color:var(--cyan); font-weight:800; font-size:18px; }
+  .liste.x div::before { content:'✕'; color:var(--rot); }
+  .liste div b { color:var(--sand); }
+  .filme { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:26px; }
+  .filme a { position:relative; display:block; aspect-ratio:16/9; border-radius:16px; overflow:hidden; border:1.5px solid var(--linie); }
+  .filme img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
+  .filme a:hover img { transform:scale(1.04); }
+  .filme span { position:absolute; left:12px; bottom:10px; font-size:13px; font-weight:700; text-shadow:0 2px 8px rgba(0,0,0,.8); }
+  .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+  .links a { display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:999px; border:1.5px solid rgba(245,243,238,.25); color:var(--sand); font-weight:700; font-size:15px; background:rgba(7,9,13,.5); }
+  .links a:hover { border-color:var(--cyan); text-decoration:none; color:var(--cyan); }
+
+  /* Trichter */
+  .trichter { margin-top:30px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; align-items:stretch; }
+  .trichter div { background:var(--flaeche); border:1.5px solid var(--linie); border-radius:18px; padding:18px; text-align:center; }
+  .trichter b { display:block; font-family:'Space Grotesk',sans-serif; font-size:clamp(30px,4.5vw,46px); line-height:1; color:var(--cyan); }
+  .trichter small { display:block; margin-top:8px; color:var(--grau); font-size:13px; }
+  .trichter div:last-child b { color:var(--lila); }
+  .hinweis { margin-top:14px; font-size:14px; color:var(--grau); }
+
+  /* Zeitplan */
+  .zeit { margin-top:30px; display:grid; gap:0; position:relative; }
+  .zeit::before { content:''; position:absolute; left:18px; top:10px; bottom:10px; width:2px; background:linear-gradient(180deg, var(--cyan), var(--lila)); }
+  .zeit div { position:relative; padding:14px 0 14px 54px; }
+  .zeit div::before { content:''; position:absolute; left:11px; top:22px; width:16px; height:16px; border-radius:50%; background:var(--tinte); border:3px solid var(--cyan); }
+  .zeit div:last-child::before { border-color:var(--lila); }
+  .zeit b { display:block; font-family:'Space Grotesk',sans-serif; font-size:19px; }
+  .zeit p { color:var(--grau); font-size:15px; margin-top:4px; }
+
+  /* Geld */
+  .rechnung { margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .rechnung div { background:var(--flaeche); border:1.5px solid var(--linie); border-radius:18px; padding:20px; }
+  .rechnung small { display:block; font-size:13px; color:var(--grau); text-transform:uppercase; letter-spacing:.04em; }
+  .rechnung .weg { margin-top:10px; font-size:15px; color:var(--grau); }
+  .rechnung .weg b { color:var(--sand); }
+  .rechnung .erg { margin-top:12px; font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; color:var(--lila); }
+  .rechnung .erg span { display:block; font-family:'Inter',sans-serif; font-size:13px; font-weight:600; color:var(--grau); }
+
+  /* FAQ */
+  details { border:1.5px solid var(--linie); border-radius:16px; background:var(--flaeche); margin-top:10px; }
+  summary { cursor:pointer; padding:16px 18px; font-weight:700; font-size:16px; list-style:none; display:flex; justify-content:space-between; gap:12px; }
+  summary::after { content:'+'; color:var(--cyan); font-weight:800; font-size:20px; line-height:1; }
+  details[open] summary::after { content:'–'; }
+  details p { padding:0 18px 16px; color:var(--grau); font-size:15px; }
+
+  /* Bewerben */
+  .los { margin-top:30px; border-radius:26px; padding:30px; background:var(--gruen); color:#06220f; display:grid; grid-template-columns:1.2fr .8fr; gap:20px; align-items:center; }
+  .los h3 { color:#06220f; font-size:26px; }
+  .los p { color:#06220f; font-size:16px; margin-top:8px; }
+  .los .nummer { font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,4vw,40px); font-weight:700; letter-spacing:-.02em; text-align:right; }
+  .los .nummer small { display:block; font-family:'Inter',sans-serif; font-size:14px; font-weight:600; }
+  .los a { color:#06220f; }
+  .fuss { padding:40px 0 60px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:14px; color:var(--grau); border-top:1px solid var(--linie); }
+
+  /* Animation */
+  .auf { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .auf.da { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce) { .auf { opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:760px) {
+    .hero { grid-template-columns:1fr; padding:20px 0 50px; min-height:0; }
+    .hero .bild { max-width:420px; aspect-ratio:4/5; }
+    .raster.zwei, .raster.drei, .rechnung, .filme { grid-template-columns:1fr; }
+    .trichter { grid-template-columns:repeat(2,1fr); }
+    .los { grid-template-columns:1fr; } .los .nummer { text-align:left; }
+    section { padding:50px 0; }
+  }
+  @media print {
+    .glow { display:none; }
+    body { background:#07090d; }
+    .auf { opacity:1; transform:none; }
+    section { break-inside:avoid; page-break-inside:avoid; padding:36px 0; }
+    .hero { min-height:0; }
+    details { break-inside:avoid; }
+    details > * { display:block; }
+    summary::after { display:none; }
+  }
+  .tabelle { margin-top:26px; width:100%; border-collapse:separate; border-spacing:0; border:1.5px solid var(--linie); border-radius:18px; overflow:hidden; font-size:15px; }
+  .tabelle th, .tabelle td { padding:14px 16px; text-align:left; border-bottom:1px solid var(--linie); }
+  .tabelle th { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--grau); background:var(--flaeche); }
+  .tabelle tr:last-child td { border-bottom:0; }
+  .tabelle td b { color:var(--cyan); font-family:'Space Grotesk',sans-serif; font-size:18px; }
+  @media (max-width:760px) { .tabelle { font-size:14px; } .tabelle th, .tabelle td { padding:10px; } }
+</style>
+<noscript><style>.auf{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div class="glow c"></div><div class="glow l"></div>
+<main class="wrap">
+
+  <header class="kopf">
+    <img src="/assets/img/logo.svg" alt="Veranda Films">
+    <span class="chip">Closer · Commission only</span>
+  </header>
+
+  <section class="hero" style="border:0">
+    <div>
+      <p class="ober">Remote · US market · 20% commission</p>
+      <h1>Close<span>US rental</span>managers</h1>
+      <p class="lead">You call vacation rental managers in the USA and sell <b>property films</b> and <b>direct-booking websites</b>. We give you the leads, the phone line and the CRM. We produce and deliver. You keep <b>20% of every paid order, with no cap</b>.</p>
+      <div class="tags">
+        <span class="hi">20% of every paid order</span>
+        <span>No cap</span>
+        <span>US business hours</span>
+        <span>Start Mon 23 Nov</span>
+      </div>
+    </div>
+    <figure class="bild"><img src="/join-9f3k2/agent.webp" alt=""><figcaption>Illustration. Your desk, your headset, your room.</figcaption></figure>
+  </section>
+  <p class="runter">↓ 6 short chapters · about 5 minutes</p>
+
+  <!-- 1 -->
+  <section id="what">
+    <p class="nr">01 · What you sell</p>
+    <h2 class="auf">Three products, <em>one conversation.</em></h2>
+    <p class="intro auf">We turn the photos a rental manager already has into a 30-second property film: no crew, no drone, nobody on site. The manager approves the film before it's used anywhere. We also build direct-booking websites with the film on top, so guests can book without platform fees.</p>
+    <div class="raster drei auf">
+      <div class="kachel hi"><small>Film packages</small><b class="zahl cyan">20–100</b><p>homes per manager. The big deals: one film for every property in the portfolio, at a per-film rate.</p></div>
+      <div class="kachel lila"><small>Booking websites</small><b class="zahl lila">€1,500</b><p>and up. Their own site with the film on top, gallery, rooms and a booking button. Ideal for managers with an outdated site or none at all.</p></div>
+      <div class="kachel"><small>Door opener</small><b class="zahl">€150</b><p>for a single film, paid only after the customer has watched and approved it. Zero risk for them, an easy first yes for you.</p></div>
+    </div>
+    <div class="filme auf">
+      <a href="/films.html" target="_blank"><img src="/media/films/balangan.jpg" alt=""><span>Balangan · Bali</span></a>
+      <a href="/films.html" target="_blank"><img src="/media/films/segara.jpg" alt=""><span>Segara · Nusa Ceningan</span></a>
+      <a href="/films.html" target="_blank"><img src="/media/films/aurora.jpg" alt=""><span>Aurora · visualisation</span></a>
+    </div>
+    <div class="links auf">
+      <a href="https://verandafilms.com" target="_blank">🌐 verandafilms.com</a>
+      <a href="https://verandafilms.com/films.html" target="_blank">🎬 Example films</a>
+      <a href="https://verandafilms.com/websites.html" target="_blank">🖥 Websites</a>
+      <a href="https://verandafilms.com/demo-seabreeze/" target="_blank">✨ Demo website</a>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="money">
+    <p class="nr">02 · What you earn</p>
+    <h2 class="auf">20% of every paid order. <em>No cap.</em></h2>
+    <p class="intro auf">Commission only, no base pay. You earn on money that actually arrives, and for six months you also earn on everything your clients order again.</p>
+    <div class="rechnung auf">
+      <div><small>Manager portfolio</small><p class="weg">Films for 20–100 homes, an order of about <b>€2,000–6,000</b>, quoted per client</p><p class="erg">€400–1,200<span>for you, one deal</span></p></div>
+      <div><small>Single film</small><p class="weg">One film, paid after the client approves it, <b>€150</b></p><p class="erg">€30<span>and often the start of a bigger order</span></p></div>
+      <div><small>Booking website</small><p class="weg">One website from <b>€1,500</b></p><p class="erg">€300+<span>for you, one deal</span></p></div>
+    </div>
+    <p class="hinweis auf">Examples, not promises. Order values depend on the client. You earn on clients from the leads assigned to you in our CRM; leads another caller is already working on are not yours.</p>
+    <table class="tabelle auf">
+      <tr><th>Rule</th><th>What it means</th></tr>
+      <tr><td><b>20%</b></td><td>of every order your client pays, first order and reorders</td></tr>
+      <tr><td><b>6 months</b></td><td>from your client's first payment, everything they reorder counts for you</td></tr>
+      <tr><td><b>Monthly</b></td><td>paid on the 5th for all orders paid in the previous month</td></tr>
+      <tr><td><b>Refund</b></td><td>if a client gets their money back, the commission for that order is cancelled</td></tr>
+    </table>
+  </section>
+
+  <!-- 3 -->
+  <section id="who">
+    <p class="nr">03 · Who you call</p>
+    <h2 class="auf">Researched US leads, <em>ready in your dialer.</em></h2>
+    <p class="intro auf">Vacation rental and property management companies across the USA, most of them with 20 or more homes. Every lead in our CRM has a phone number, the company's local time and notes from our research. For the website offer we flag managers whose site is outdated or who have no website at all.</p>
+    <div class="raster zwei auf">
+      <div class="kachel"><small>Your goal on the call</small><b class="zahl cyan">"Yes"</b><p>A clear yes to the next step: a sample film, a package quote or a website proposal. We send the details by email right after your call and handle production.</p></div>
+      <div class="kachel"><small>You never</small><b class="zahl lila">deliver</b><p>Films, websites, invoices and support are on us. You sell. That's the whole job.</p></div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section id="fit">
+    <p class="nr">04 · Is this for you?</p>
+    <h2 class="auf">What you get, <em>what you bring.</em></h2>
+    <div class="raster zwei auf">
+      <div>
+        <h3>You get, free</h3>
+        <div class="liste">
+          <div><b>US phone number</b> and a dialer in your browser</div>
+          <div><b>Our CRM</b> with researched leads and local times</div>
+          <div><b>Sales playbook</b> and a short online training</div>
+          <div><b>Support group</b> for questions during your shift</div>
+        </div>
+      </div>
+      <div>
+        <h3>You bring</h3>
+        <div class="liste">
+          <div><b>Proven US cold calling</b> (B2B appointment setting or closing)</div>
+          <div><b>Clear, fluent English</b></div>
+          <div><b>4+ hours a day, 5 days a week</b> in US business hours</div>
+          <div><b>Laptop, headset, stable internet</b>, a quiet room</div>
+        </div>
+      </div>
+    </div>
+    <div class="liste x auf" style="margin-top:22px">
+      <div>Not for you if you need a fixed salary or have never called businesses in the US.</div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section id="start">
+    <p class="nr">05 · Hours and start</p>
+    <h2 class="auf">US office hours. <em>One-month trial.</em></h2>
+    <div class="zeit auf">
+      <div><b>US business hours</b><p>9 am–5 pm Eastern = 10 pm–6 am in Manila and Bali. Pick your fixed block of at least 4 hours. Australia and New Zealand follow later, in the Manila morning.</p></div>
+      <div><b>Before you start</b><p>Short online training and our sales playbook. Then your login and your US number.</p></div>
+      <div><b>Monday, 23 November</b><p>First shift. One-month trial, for both sides.</p></div>
+      <div><b>After the trial</b><p>We keep the closers who bring results and give them the best leads first.</p></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="faq">
+    <p class="nr">06 · Straight answers</p>
+    <h2 class="auf">Questions people ask.</h2>
+    <details class="auf"><summary>Is there really no base pay?</summary><p>Yes, this role is commission only. In return the rate is 20%, there is no cap, and you keep earning on reorders for six months.</p></details>
+    <details class="auf"><summary>How do I get paid?</summary><p>On the 5th of each month for all orders paid in the previous month, by PayPal or Payoneer. If you were hired through a freelance platform, we pay through that platform.</p></details>
+    <details class="auf"><summary>When is a deal mine?</summary><p>Every lead you work is assigned to you in our CRM, with your notes and call history. When a client from one of your leads pays, now or later by email, the order is yours. You get a monthly statement of your clients and commissions.</p></details>
+    <details class="auf"><summary>What leads do I get?</summary><p>Researched lists of US vacation rental businesses with a direct business phone number, the local time and notes from our research (for example: their website is outdated or has no online booking). You call from a US number in a browser dialer. No autodialer, no recorded messages.</p></details>
+    <details class="auf"><summary>Are the films AI?</summary><p>Yes, and we say so if asked. The camera movement is added to the owner's real photos, every clip is checked against the original, and nothing is invented. The customer approves the film before it's used.</p></details>
+    <details class="auf"><summary>Do I need to know video or web design?</summary><p>No. You sell, we produce. The playbook gives you the answers to every common question.</p></details>
+  </section>
+
+  <!-- Bewerben -->
+  <section id="apply" style="padding-bottom:30px">
+    <p class="nr">Apply</p>
+    <h2 class="auf">Show us how you sound <em>on a cold call.</em></h2>
+    <div class="los auf">
+      <div>
+        <h3>Send us on WhatsApp, starting with "Closer – your name":</h3>
+        <p><b>1.</b> A 2-minute voice note: a mock cold call to "Mike", who manages 40 vacation homes in Florida and says "we already have good photos". Please don't send recordings of real calls.<br><b>2.</b> Three lines: where you cold-called before, what you sold, your best month.<br><b>3.</b> The hours you can work (your local time) and your CV.</p>
+      </div>
+      <div class="nummer"><a href="https://wa.me/6285190751710?text=Closer%20%E2%80%93%20" target="_blank">+62 851 9075 1710</a><small>Tap to open WhatsApp</small></div>
+    </div>
+  </section>
+
+  <footer class="fuss">
+    <span>Veranda Films · Badung, Bali · <a href="https://verandafilms.com">verandafilms.com</a></span>
+    <span>This page is for applicants only.</span>
+  </footer>
+</main>
+<script>
+  (function(){
+    var els=document.querySelectorAll('.auf');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('da')});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('da');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
