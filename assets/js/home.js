@@ -355,21 +355,21 @@
       bCostCrew: q('[data-bar="cost-crew"]'), bCostUs: q('[data-bar="cost-us"]'), bTimeCrew: q('[data-bar="time-crew"]'), bTimeUs: q('[data-bar="time-us"]'),
       result: q('[data-calc-result]')
     };
-    function eur(v) { return '€' + v.toLocaleString('en-US'); }
+    function usd(v) { return '$' + v.toLocaleString('en-US'); }
     function txt(el, v) { if (el) el.textContent = v; }
     function bar(el, w) { if (el) el.style.setProperty('--w', clamp(w, .02, 1).toFixed(3)); }
     function update() {
       var n = parseInt(range.value, 10) || 1;
-      var crewCost = n * 800, crewDays = n, usCost = n * 150, usDays = 0;
+      var crewCost = n * 880, crewDays = n, usCost = n * 170, usDays = 0;
       out.n.forEach(function (el) { el.textContent = n; });
-      txt(out.crewCost, eur(crewCost)); txt(out.crewDays, crewDays + (crewDays === 1 ? ' day' : ' days')); txt(out.crewVisits, n + (n === 1 ? ' visit' : ' visits'));
-      txt(out.usCost, eur(usCost)); txt(out.usDays, 'a few minutes'); txt(out.usVisits, '0 visits');
+      txt(out.crewCost, usd(crewCost)); txt(out.crewDays, crewDays + (crewDays === 1 ? ' day' : ' days')); txt(out.crewVisits, n + (n === 1 ? ' visit' : ' visits'));
+      txt(out.usCost, usd(usCost)); txt(out.usDays, 'a few minutes'); txt(out.usVisits, '0 visits');
       var maxCost = Math.max(crewCost, usCost), maxDays = Math.max(crewDays, 1);
       bar(out.bCostCrew, crewCost / maxCost); bar(out.bCostUs, usCost / maxCost);
       bar(out.bTimeCrew, crewDays / maxDays); bar(out.bTimeUs, .02);
       var save = crewCost - usCost, days = crewDays - usDays;
       if (out.result) {
-        out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + eur(save) + '</b> and <b>' +
+        out.result.innerHTML = 'For <b>' + n + (n === 1 ? ' property' : ' properties') + '</b> you save about <b>' + usd(save) + '</b> and <b>' +
           n + (n === 1 ? ' site visit' : ' site visits') + '</b>. The first film arrives in <b>about a week</b>.';
       }
       range.style.setProperty('--p', ((n - 1) / 199 * 100).toFixed(2) + '%');
