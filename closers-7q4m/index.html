@@ -96,6 +96,7 @@
 
   /* Geld */
   .rechnung { margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .rechnung.vier { grid-template-columns:repeat(2,1fr); }
   .rechnung div { background:var(--flaeche); border:1.5px solid var(--linie); border-radius:18px; padding:20px; }
   .rechnung small { display:block; font-size:13px; color:var(--grau); text-transform:uppercase; letter-spacing:.04em; }
   .rechnung .weg { margin-top:10px; font-size:15px; color:var(--grau); }
@@ -127,7 +128,7 @@
   @media (max-width:760px) {
     .hero { grid-template-columns:1fr; padding:20px 0 50px; min-height:0; }
     .hero .bild { max-width:420px; aspect-ratio:4/5; }
-    .raster.zwei, .raster.drei, .rechnung, .filme { grid-template-columns:1fr; }
+    .raster.zwei, .raster.drei, .rechnung, .rechnung.vier, .filme { grid-template-columns:1fr; }
     .trichter { grid-template-columns:repeat(2,1fr); }
     .los { grid-template-columns:1fr; } .los .nummer { text-align:left; }
     section { padding:50px 0; }
@@ -162,14 +163,15 @@
 
   <section class="hero" style="border:0">
     <div>
-      <p class="ober">Remote · US market · 20% commission</p>
-      <h1>Close<span>US rental</span>managers</h1>
-      <p class="lead">You call vacation rental managers in the USA and sell <b>property films</b> and <b>direct-booking websites</b>. We give you the leads, the phone line and the CRM. We produce and deliver. You keep <b>20% of every paid order, with no cap</b>.</p>
+      <p class="ober">Remote · USA &amp; Australia · 20–30% commission</p>
+      <h1>Close<span>the whole</span>deal</h1>
+      <p class="lead">You call businesses in the USA and Australia and close the deal yourself: <b>websites</b> and <b>property films</b>, from the first call to the payment link. We give you the leads, the phone line, the CRM and a finished demo website for every Zoom. Production and delivery are automated. You keep <b>20% of every paid order, rising to 30%</b>.</p>
       <div class="tags">
-        <span class="hi">20% of every paid order</span>
+        <span class="hi">20% → 25% → 30%</span>
         <span>No cap</span>
-        <span>US business hours</span>
-        <span>Start Mon 23 Nov</span>
+        <span>Independent contractor</span>
+        <span>USA or Australia hours</span>
+        <span>Start any weekday</span>
       </div>
     </div>
     <figure class="bild"><img src="/join-9f3k2/agent.webp" alt=""><figcaption>Illustration. Your desk, your headset, your room.</figcaption></figure>
@@ -181,9 +183,10 @@
     <p class="nr">01 · What you sell</p>
     <h2 class="auf">Three products, <em>one conversation.</em></h2>
     <p class="intro auf">We turn the photos a rental manager already has into a 30-second property film: no crew, no drone, nobody on site. The manager approves the film before it's used anywhere. We also build direct-booking websites with the film on top, so guests can book without platform fees.</p>
-    <div class="raster drei auf">
+    <div class="raster zwei auf">
       <div class="kachel hi"><small>Film packages</small><b class="zahl cyan">20–100</b><p>homes per manager. The big deals: one film for every property in the portfolio, at a per-film rate.</p></div>
       <div class="kachel lila"><small>Booking websites</small><b class="zahl lila">$1,650</b><p>and up. Their own site with the film on top, gallery, rooms and a booking button. Ideal for managers with an outdated site or none at all.</p></div>
+      <div class="kachel"><small>Local business websites</small><b class="zahl">$1,000</b><p>US$1,000 / A$1,500 for cafés, salons, workshops and trades with no real website. Short sales cycle, huge market.</p></div>
       <div class="kachel"><small>Door opener</small><b class="zahl">$170</b><p>for a single film, paid only after the customer has watched and approved it. Zero risk for them, an easy first yes for you.</p></div>
     </div>
     <div class="filme auf">
@@ -202,17 +205,23 @@
   <!-- 2 -->
   <section id="money">
     <p class="nr">02 · What you earn</p>
-    <h2 class="auf">20% of every paid order. <em>No cap.</em></h2>
-    <p class="intro auf">Commission only, no base pay. You earn on money that actually arrives, and for six months you also earn on everything your clients order again.</p>
+    <h2 class="auf">20%, then 25%, then 30%. <em>No cap.</em></h2>
+    <p class="intro auf">Commission only, no base pay. You earn on money that actually arrives, and for six months you also earn on everything your clients order again. The more you close in a month, the higher your rate for that whole month.</p>
     <div class="rechnung auf">
+      <div><small>Your month</small><p class="weg">Paid revenue from your clients under <b>$5,000</b></p><p class="erg">20%<span>on all of it</span></p></div>
+      <div><small>Your month</small><p class="weg">Paid revenue from your clients <b>$5,000 or more</b></p><p class="erg">25%<span>on all of it</span></p></div>
+      <div><small>Your month</small><p class="weg">Paid revenue from your clients <b>$10,000 or more</b></p><p class="erg">30%<span>on all of it</span></p></div>
+    </div>
+    <div class="rechnung vier auf">
       <div><small>Manager portfolio</small><p class="weg">Films for 20–100 homes, an order of about <b>$2,200–6,500</b>, quoted per client</p><p class="erg">$440–1,300<span>for you, one deal</span></p></div>
       <div><small>Single film</small><p class="weg">One film, paid after the client approves it, <b>$170</b></p><p class="erg">$34<span>and often the start of a bigger order</span></p></div>
       <div><small>Booking website</small><p class="weg">One website from <b>$1,650</b></p><p class="erg">$330+<span>for you, one deal</span></p></div>
+      <div><small>Local business website</small><p class="weg">One website, <b>US$1,000</b></p><p class="erg">$200+<span>for you, one deal</span></p></div>
     </div>
-    <p class="hinweis auf">Examples, not promises. Order values depend on the client. You earn on clients from the leads assigned to you in our CRM; leads another caller is already working on are not yours.</p>
+    <p class="hinweis auf">Examples at the 20% base rate, not promises. Order values depend on the client. You earn on clients from the leads assigned to you in our CRM; leads another caller is already working on are not yours.</p>
     <table class="tabelle auf">
       <tr><th>Rule</th><th>What it means</th></tr>
-      <tr><td><b>20%</b></td><td>of every order your client pays, first order and reorders</td></tr>
+      <tr><td><b>20–30%</b></td><td>of every order your client pays, first order and reorders. Your rate for a month depends on that month's paid revenue: 20% below $5,000, 25% from $5,000, 30% from $10,000</td></tr>
       <tr><td><b>6 months</b></td><td>from your client's first payment, everything they reorder counts for you</td></tr>
       <tr><td><b>Monthly</b></td><td>paid on the 5th for all orders paid in the previous month</td></tr>
       <tr><td><b>Refund</b></td><td>if a client gets their money back, the commission for that order is cancelled</td></tr>
@@ -222,10 +231,11 @@
   <!-- 3 -->
   <section id="who">
     <p class="nr">03 · Who you call</p>
-    <h2 class="auf">Researched US leads, <em>ready in your dialer.</em></h2>
-    <p class="intro auf">Vacation rental and property management companies across the USA, most of them with 20 or more homes. Every lead in our CRM has a phone number, the company's local time and notes from our research. For the website offer we flag managers whose site is outdated or who have no website at all.</p>
-    <div class="raster zwei auf">
-      <div class="kachel"><small>Your goal on the call</small><b class="zahl cyan">"Yes"</b><p>A clear yes to the next step: a sample film, a package quote or a website proposal. We send the details by email right after your call and handle production.</p></div>
+    <h2 class="auf">Researched leads, <em>ready in your dialer.</em></h2>
+    <p class="intro auf">Vacation rental and property management companies across the USA and Australia, most of them with 20 or more homes, plus local businesses with no real website. Every lead in our CRM has a phone number, the company's local time and notes from our research. For the website offer we flag managers whose site is outdated or who have no website at all.</p>
+    <div class="raster drei auf">
+      <div class="kachel"><small>Call 1</small><b class="zahl cyan">Zoom</b><p>You book a 20-minute Zoom with the decision maker. Within a few hours our system builds a personalised demo website for that business, ready before your Zoom.</p></div>
+      <div class="kachel"><small>Call 2</small><b class="zahl cyan">Close</b><p>You show them their own website, handle the questions and send the payment link. Paid = yours. Then our system takes over delivery.</p></div>
       <div class="kachel"><small>You never</small><b class="zahl lila">deliver</b><p>Films, websites, invoices and support are on us. You sell. That's the whole job.</p></div>
     </div>
   </section>
@@ -249,24 +259,24 @@
         <div class="liste">
           <div><b>Proven US cold calling</b> (B2B appointment setting or closing)</div>
           <div><b>Clear, fluent English</b></div>
-          <div><b>4+ hours a day, 5 days a week</b> in US business hours</div>
+          <div><b>4+ hours a day, 5 days a week</b> in US or Australian business hours</div>
           <div><b>Laptop, headset, stable internet</b>, a quiet room</div>
         </div>
       </div>
     </div>
     <div class="liste x auf" style="margin-top:22px">
-      <div>Not for you if you need a fixed salary or have never called businesses in the US.</div>
+      <div>Not for you if you need a fixed salary or have never cold-called businesses yourself.</div>
     </div>
   </section>
 
   <!-- 5 -->
   <section id="start">
     <p class="nr">05 · Hours and start</p>
-    <h2 class="auf">US office hours. <em>One-month trial.</em></h2>
+    <h2 class="auf">Pick your market. <em>One-month trial.</em></h2>
     <div class="zeit auf">
-      <div><b>US business hours</b><p>9 am–5 pm Eastern = 10 pm–6 am in Manila and Bali. Pick your fixed block of at least 4 hours. Australia and New Zealand follow later, in the Manila morning.</p></div>
-      <div><b>Before you start</b><p>Short online training and our sales playbook. Then your login and your US number.</p></div>
-      <div><b>Monday, 23 November</b><p>First shift. One-month trial, for both sides.</p></div>
+      <div><b>USA or Australia</b><p>USA: 9 am–5 pm Eastern (a normal day in Latin America, afternoon to night in Europe and Africa). Australia: 9 am–5 pm Sydney (a normal day in Asia). Pick your fixed block of at least 4 hours.</p></div>
+      <div><b>Before you start</b><p>A 15-minute video call with the founder, then our playbook and a short online training. Then your login and your phone line.</p></div>
+      <div><b>Any weekday</b><p>First shift as soon as you are set up. One-month trial, for both sides.</p></div>
       <div><b>After the trial</b><p>We keep the closers who bring results and give them the best leads first.</p></div>
     </div>
   </section>
@@ -275,10 +285,12 @@
   <section id="faq">
     <p class="nr">06 · Straight answers</p>
     <h2 class="auf">Questions people ask.</h2>
-    <details class="auf"><summary>Is there really no base pay?</summary><p>Yes, this role is commission only. In return the rate is 20%, there is no cap, and you keep earning on reorders for six months.</p></details>
-    <details class="auf"><summary>How do I get paid?</summary><p>On the 5th of each month for all orders paid in the previous month, by PayPal or Payoneer. If you were hired through a freelance platform, we pay through that platform.</p></details>
+    <details class="auf"><summary>Is there really no base pay?</summary><p>Yes, this role is commission only. In return the rate starts at 20% and rises to 25% from $5,000 and 30% from $10,000 of paid revenue in a month, there is no cap, and you keep earning on reorders for six months.</p></details>
+    <details class="auf"><summary>How long have you been doing this?</summary><p>Straight answer: our phone team started in November 2026, so you would be one of our first closers. That is why the lead lists are fresh and why the first closers who deliver get the best leads and the higher rates first.</p></details>
+    <details class="auf"><summary>Who closes the deal?</summary><p>You do, all the way: first call, Zoom with the demo website, payment link. You never build or deliver anything. Once the client pays, our system produces the website or film and our team handles support.</p></details>
+    <details class="auf"><summary>How do I get paid?</summary><p>You work as an independent contractor, commission only. On the 5th of each month for all orders paid in the previous month, by PayPal or Payoneer. If you were hired through a freelance platform, we pay through that platform.</p></details>
     <details class="auf"><summary>When is a deal mine?</summary><p>Every lead you work is assigned to you in our CRM, with your notes and call history. When a client from one of your leads pays, now or later by email, the order is yours. You get a monthly statement of your clients and commissions.</p></details>
-    <details class="auf"><summary>What leads do I get?</summary><p>Researched lists of US vacation rental businesses with a direct business phone number, the local time and notes from our research (for example: their website is outdated or has no online booking). You call from a US number in a browser dialer. No autodialer, no recorded messages.</p></details>
+    <details class="auf"><summary>What leads do I get?</summary><p>Researched lists of vacation rental businesses and local businesses in the USA and Australia with a direct business phone number, the local time and notes from our research (for example: their website is outdated or has no online booking). You call from a local number in a browser dialer. No autodialer, no recorded messages.</p></details>
     <details class="auf"><summary>Are the films AI?</summary><p>Yes, and we say so if asked. The camera movement is added to the owner's real photos, every clip is checked against the original, and nothing is invented. The customer approves the film before it's used.</p></details>
     <details class="auf"><summary>Do I need to know video or web design?</summary><p>No. You sell, we produce. The playbook gives you the answers to every common question.</p></details>
   </section>
@@ -290,7 +302,7 @@
     <div class="los auf">
       <div>
         <h3>Send us on WhatsApp, starting with "Closer – your name":</h3>
-        <p><b>1.</b> A 2-minute voice note: a mock cold call to "Mike", who manages 40 vacation homes in Florida and says "we already have good photos". Please don't send recordings of real calls.<br><b>2.</b> Three lines: where you cold-called before, what you sold, your best month.<br><b>3.</b> The hours you can work (your local time) and your CV.</p>
+        <p><b>1.</b> A 2-minute voice note: a mock cold call to "Mike", who manages 40 vacation homes in Florida and says "we already have good photos". Please don't send recordings of real calls.<br><b>2.</b> Three lines: where you cold-called before, what you sold, your best month.<br><b>3.</b> The hours you can work (your local time), which market you prefer (USA or Australia) and your CV.<br><b>4.</b> If it fits, you get a 15-minute video call with the founder.</p>
       </div>
       <div class="nummer"><a href="https://wa.me/6285190751710?text=Closer%20%E2%80%93%20" target="_blank">+62 851 9075 1710</a><small>Tap to open WhatsApp</small></div>
     </div>
